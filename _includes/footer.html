@@ -1,27 +1,20 @@
 <footer class="site-footer">
-  <div class="container footer-top">
+  <div class="container footer-grid">
     <div class="footer-copy">
       <h2>Get in Touch</h2>
-    </div>
 
-    <div class="footer-media">
-      <img src="{{ '/assets/img/general/portrait2.png' | relative_url }}" alt="Illustration of Michael Berthold">
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div class="container footer-bottom-grid">
-      <div class="footer-name">
-        {{ site.data.site_settings.name_line_1 }}<br>
-        {{ site.data.site_settings.name_line_2 }}
-      </div>
-
-      <address class="footer-contact">
+      <div class="footer-contact-list">
         <p>{{ site.data.site_settings.address }}</p>
         <p>{{ site.data.site_settings.phone }}</p>
         <p><a href="mailto:{{ site.data.site_settings.email }}">{{ site.data.site_settings.email }}</a></p>
         <p><a href="{{ site.data.site_settings.linkedin_url }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-      </address>
+      </div>
+    </div>
+
+    <div class="footer-image">
+      <img src="{{ '/assets/img/general/portrait2.png' | relative_url }}" alt="Illustration of Michael Berthold">
     </div>
   </div>
+
+  <div class="footer-accent-bar"></div>
 </footer>
