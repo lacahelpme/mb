@@ -1,0 +1,59 @@
+---
+layout: default
+title: "Publications"
+seo_title: "Publications | Michael R. Berthold"
+seo_description: "Books, articles, and publication lists by Michael R. Berthold."
+---
+
+<section class="page-hero">
+  <div class="container narrow">
+    <h1>Publications</h1>
+    <p class="lead">Books, thought leadership, and selected publication lists.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Books and Textbooks</h2>
+    <div class="card-grid three">
+      {% assign all_books = site.books | sort: 'date' | reverse %}
+      {% for item in all_books %}
+      <article class="content-card">
+        {% if item.cover %}<img src="{{ item.cover | relative_url }}" alt="{{ item.alt | default: item.title }}">{% endif %}
+        <h3>{{ item.title }}</h3>
+        <p class="meta">{{ item.author }} · {{ item.year }}</p>
+        <p>{{ item.excerpt }}</p>
+        <a class="button {% if item.button_style == 'accent' %}accent{% else %}default{% endif %}" href="{{ item.external_url }}" target="_blank" rel="noopener noreferrer">{{ item.button_label }}</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Select Thought Leadership / Industry Commentary</h2>
+    <div class="card-grid two">
+      {% assign all_publications = site.publications | sort: 'date' | reverse %}
+      {% for item in all_publications %}
+      <article class="content-card">
+        {% if item.cover %}<img src="{{ item.cover | relative_url }}" alt="{{ item.alt | default: item.title }}">{% endif %}
+        <p class="meta">{{ item.source_name }} · {{ item.date | date: "%d %B %Y" }}</p>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.excerpt }}</p>
+        <a class="button default" href="{{ item.url | relative_url }}">{{ item.button_label }}</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <h2>Edited Volumes</h2>
+    <p>Add this section as static text content directly in this file. No special editor logic is needed.</p>
+
+    <h2>Peer Reviewed Publications</h2>
+    <p>Add this section as static text content directly in this file. No links or collection items are required here.</p>
+  </div>
+</section>

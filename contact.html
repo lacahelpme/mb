@@ -1,0 +1,31 @@
+---
+layout: default
+title: "Contact"
+seo_title: "Contact | Michael R. Berthold"
+seo_description: "Contact details, press contact, and professional links for Michael R. Berthold."
+---
+
+<section class="page-hero">
+  <div class="container narrow">
+    <h1>Contact</h1>
+    <p class="lead">Use this page for press contact, professional links, and direct outreach details.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow contact-stack">
+    <div>
+      {% for line in site.data.site_settings.contact.address_lines %}
+      <p>{{ line }}</p>
+      {% endfor %}
+      <p><a href="tel:{{ site.data.site_settings.contact.phone_link }}">{{ site.data.site_settings.contact.phone_display }}</a></p>
+      <p><a href="mailto:{{ site.data.site_settings.contact.email }}">{{ site.data.site_settings.contact.email }}</a></p>
+    </div>
+
+    <div>
+      <p>{{ site.data.site_settings.contact.press_contact_label }}</p>
+      <p><a href="{{ site.data.site_settings.contact.linkedin_url }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      <p><a href="{{ site.data.site_settings.contact.scholar_url }}" target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
+    </div>
+  </div>
+</section>

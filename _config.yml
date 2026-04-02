@@ -1,0 +1,41 @@
+title: "Michael R. Berthold"
+description: "Computer scientist, speaker, publicist, and AI & data science pioneer."
+baseurl: ""
+url: ""
+markdown: kramdown
+permalink: pretty
+
+collections:
+  books:
+    output: false
+  publications:
+    output: true
+    permalink: /publications/:name/
+  musings:
+    output: true
+    permalink: /musings/:name/
+  videos:
+    output: true
+    permalink: /videos/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      lang: en
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: article
+  - scope:
+      path: ""
+      type: musings
+    values:
+      layout: article
+  - scope:
+      path: ""
+      type: videos
+    values:
+      layout: article

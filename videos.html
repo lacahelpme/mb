@@ -1,0 +1,42 @@
+---
+layout: default
+title: "Videos"
+seo_title: "Videos | Michael R. Berthold"
+seo_description: "Conference talks and video appearances by Michael R. Berthold."
+---
+
+<section class="page-hero">
+  <div class="container narrow">
+    <h1>Conference Talks &amp; Presentations</h1>
+    <p class="lead">All videos listed automatically by date.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="stack-list">
+      {% assign all_videos = site.videos | sort: 'date' | reverse %}
+      {% for item in all_videos %}
+      <article class="video-list-card">
+        <div>
+          {% if item.video_file %}
+          <video controls preload="metadata">
+            <source src="{{ item.video_file | relative_url }}" type="video/mp4">
+          </video>
+          {% elsif item.video_embed %}
+          <div class="embed-wrap">
+            <iframe src="{{ item.video_embed }}" title="{{ item.title }}" loading="lazy" allowfullscreen></iframe>
+          </div>
+          {% endif %}
+        </div>
+        <div>
+          <h2>{{ item.title }}</h2>
+          <p class="meta">{{ item.event_name }} · {{ item.date | date: "%d %B %Y" }}</p>
+          <p>{{ item.excerpt }}</p>
+          <a class="button default" href="{{ item.url | relative_url }}">Open video page</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

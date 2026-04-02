@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="site-logo" href="{{ '/' | relative_url }}" aria-label="{{ site.data.site_settings.site_name }} home">
+      {{ site.data.site_settings.site_initials }}
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul>
+        {% assign current_url = page.url | replace:'index.html','' %}
+        {% for item in site.data.site_settings.menu %}
+          {% assign item_url = item.url | relative_url %}
+          {% assign item_clean = item.url | replace:'index.html','' %}
+          <li>
+            <a href="{{ item_url }}" {% if current_url == item_clean %}aria-current="page"{% endif %}>{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

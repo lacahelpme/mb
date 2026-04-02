@@ -1,0 +1,130 @@
+---
+layout: default
+title: "Home"
+seo_title: "Michael R. Berthold | Computer Scientist"
+seo_description: "Official website of Michael R. Berthold featuring books, publications, musings, videos, and contact information."
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">About me</p>
+      <h1>Hello</h1>
+      <p class="hero-subtitle">I’m Michael Berthold, computer scientist.</p>
+      <a class="button accent" href="#about">Get to know me</a>
+    </div>
+    <div class="hero-media placeholder-box">Hero image placeholder</div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <article class="stat-card accent"><strong>250+</strong><span>Scientific Publications</span></article>
+    <article class="stat-card"><strong>3+</strong><span>Books and Textbooks</span></article>
+    <article class="stat-card dark"><strong>30+</strong><span>Years in Data Science &amp; AI</span></article>
+    <article class="stat-card mid"><strong>4+</strong><span>Awards and honors</span></article>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container split-grid">
+    <div>
+      <h2>About Me</h2>
+      <p>Replace this with the final introductory copy for the homepage about section.</p>
+      <p>Use this block for concise positioning, biography highlights, and key value points.</p>
+    </div>
+    <div class="stack-cards">
+      <div class="outline-card">Speaker</div>
+      <div class="outline-card">Publicist</div>
+      <div class="outline-card">AI &amp; Data Science Pioneer</div>
+    </div>
+  </div>
+</section>
+
+<section class="section accent-band">
+  <div class="container split-grid">
+    <div>
+      <h2>Books</h2>
+      <p>Latest 3 books are shown automatically.</p>
+    </div>
+    <div class="card-grid three">
+      {% assign latest_books = site.books | sort: 'date' | reverse | slice: 0, 3 %}
+      {% for item in latest_books %}
+      <article class="content-card">
+        {% if item.cover %}<img src="{{ item.cover | relative_url }}" alt="{{ item.alt | default: item.title }}">{% endif %}
+        <h3>{{ item.title }}</h3>
+        <p class="meta">{{ item.author }} · {{ item.year }}</p>
+        <p>{{ item.excerpt }}</p>
+        <a class="button {% if item.button_style == 'accent' %}accent{% else %}default{% endif %}" href="{{ item.external_url }}" target="_blank" rel="noopener noreferrer">{{ item.button_label }}</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split-grid">
+    <div>
+      <h2>Latest Video</h2>
+      <p>The most recent video appears automatically.</p>
+    </div>
+    <div>
+      {% assign latest_video = site.videos | sort: 'date' | reverse | first %}
+      {% if latest_video %}
+      <article class="video-card">
+        {% if latest_video.video_file %}
+        <video controls preload="metadata">
+          <source src="{{ latest_video.video_file | relative_url }}" type="video/mp4">
+        </video>
+        {% elsif latest_video.video_embed %}
+        <div class="embed-wrap">
+          <iframe src="{{ latest_video.video_embed }}" title="{{ latest_video.title }}" loading="lazy" allowfullscreen></iframe>
+        </div>
+        {% endif %}
+        <h3>{{ latest_video.title }}</h3>
+        <p class="meta">{{ latest_video.event_name }} · {{ latest_video.date | date: "%d %B %Y" }}</p>
+      </article>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split-grid">
+    <div>
+      <h2>Recent Musings</h2>
+      <p>Latest 3 musings shown automatically.</p>
+    </div>
+    <div class="card-grid three">
+      {% assign latest_musings = site.musings | sort: 'date' | reverse | slice: 0, 3 %}
+      {% for item in latest_musings %}
+      <article class="tile-card {% if forloop.first %}accent{% else %}dark{% endif %}">
+        <p class="meta">{{ item.date | date: "%d %B %Y" }}</p>
+        <h3>{{ item.title }}</h3>
+        <a href="{{ item.url | relative_url }}">Read more</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split-grid">
+    <div>
+      <h2>Publications</h2>
+      <p>Latest 4 publications shown automatically.</p>
+    </div>
+    <div class="card-grid two">
+      {% assign latest_publications = site.publications | sort: 'date' | reverse | slice: 0, 4 %}
+      {% for item in latest_publications %}
+      <article class="content-card">
+        {% if item.cover %}<img src="{{ item.cover | relative_url }}" alt="{{ item.alt | default: item.title }}">{% endif %}
+        <p class="meta">{{ item.source_name }} · {{ item.date | date: "%d %B %Y" }}</p>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.excerpt }}</p>
+        <a class="button default" href="{{ item.url | relative_url }}">{{ item.button_label }}</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

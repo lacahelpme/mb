@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Musings"
+seo_title: "Musings | Michael R. Berthold"
+seo_description: "Recent musings and reflections by Michael R. Berthold."
+---
+
+<section class="page-hero">
+  <div class="container narrow">
+    <h1>Recent Musings</h1>
+    <p class="lead">All musings listed automatically by date.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card-grid three">
+      {% assign all_musings = site.musings | sort: 'date' | reverse %}
+      {% for item in all_musings %}
+      <article class="tile-card {% if forloop.first %}accent{% else %}dark{% endif %}">
+        <p class="meta">{{ item.date | date: "%d %B %Y" }}</p>
+        <h3>{{ item.title }}</h3>
+        <a href="{{ item.url | relative_url }}">Read more</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

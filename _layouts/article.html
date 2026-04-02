@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.seo_description %}{{ page.seo_description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  {% include header.html %}
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <h1>{{ page.title }}</h1>
+        {% if page.date %}
+          <p class="meta">{{ page.date | date: "%d %B %Y" }}{% if page.author_line %} · {{ page.author_line }}{% endif %}{% if page.event_name %} · {{ page.event_name }}{% endif %}</p>
+        {% elsif page.author_line %}
+          <p class="meta">{{ page.author_line }}</p>
+        {% endif %}
+        {% if page.excerpt %}<p class="lead">{{ page.excerpt }}</p>{% endif %}
+      </div>
+    </section>
+
+    <section class="article-section">
+      <div class="container narrow prose">
+        {% if page.cover %}
+          <img class="article-cover" src="{{ page.cover | relative_url }}" alt="{{ page.alt | default: page.title }}">
+        {% endif %}
+
+        {% if page.video_file %}
+          <video class="article-video" controls preload="metadata">
+            <source src="{{ page.video_file | relative_url }}" type="video/mp4">
+          </video>
+        {% endif %}
+
+        {% if page.video_embed %}
+          <div class="embed-wrap">
+            <iframe src="{{ page.video_embed }}" title="{{ page.title }}" loading="lazy" allowfullscreen></iframe>
+          </div>
+        {% endif %}
+
+        {{ content }}
+      </div>
+    </section>
+  </main>
+  {% include footer.html %}
+</body>
+</html>
