@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header site-header-dark">
   <div class="container header-inner">
     <a class="logo" href="{{ '/' | relative_url }}">MB</a>
 
@@ -8,12 +8,11 @@
         <li><a href="{{ '/musings/' | relative_url }}">Musings</a></li>
         <li><a href="{{ '/videos/' | relative_url }}">Videos</a></li>
         <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
       </ul>
     </nav>
 
-    <div class="lang-switcher" aria-label="Language switcher">
-      <a href="{{ '/' | relative_url }}" aria-current="page">EN</a>
+    <div class="header-cta">
+      <a class="button button-accent button-header" href="{{ '/contact/' | relative_url }}">Contact</a>
     </div>
   </div>
 </header>
