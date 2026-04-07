@@ -300,16 +300,15 @@ h4:last-child {
   border-left: 1.5px solid rgba(255, 255, 255, 0.55);
   border-right: 1.5px solid rgba(255, 255, 255, 0.55);
   border-bottom: none;
-  min-height: auto;
-  height: 520px;
-  padding: 48px 30px 34px;
+  height: 500px;
+  padding: 28px 30px 72px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 100%;
   max-width: 500px;
   align-self: end;
   justify-self: end;
-  margin: 60px 48px 0 0;
+  margin: 26px 48px 0 0;
   background: transparent;
   position: relative;
   z-index: 2;
@@ -319,7 +318,7 @@ h4:last-child {
 .hero-copy {
   max-width: 100%;
   align-self: start;
-  padding-top: 8px;
+  padding-top: 0;
 }
 
 .hero-kicker {
@@ -355,8 +354,7 @@ h4:last-child {
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
-  align-self: start;
-  margin-top: -40px;
+  margin-top: 0;
 }
 
 .hero-actions .button {
@@ -368,7 +366,9 @@ h4:last-child {
 
 .hero-arrow {
   font-size: 4.2rem;
+  line-height: 1;
   font-weight: 300;
+  color: var(--white);
   opacity: 0.85;
   margin-left: auto;
 }
@@ -1196,21 +1196,23 @@ a:focus-visible {
   }
 
   .hero-shell {
-  display: grid;
-  grid-template-columns: 1fr 540px;
-  align-items: stretch;
-  min-height: 584px;
-  gap: 0;
-  position: relative;
-}
+    display: grid;
+    grid-template-columns: 1fr 540px;
+    align-items: stretch;
+    min-height: 584px;
+    gap: 0;
+    position: relative;
+  }
 
   .hero-visual {
     min-height: 520px;
   }
 
   .hero-panel {
-    margin: 0 0 40px;
-    max-width: none;
+    margin: 24px 24px 0 0;
+    max-width: 540px;
+    height: 460px;
+    padding: 24px 24px 56px;
   }
 
   .article-title {
@@ -1274,7 +1276,10 @@ a:focus-visible {
 
   .hero-panel {
     min-height: auto;
-    padding: 24px 18px 20px;
+    height: auto;
+    padding: 24px 18px 28px;
+    margin: 96px 0 0 0;
+    max-width: none;
   }
 
   .hero-title {
