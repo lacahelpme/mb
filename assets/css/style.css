@@ -495,7 +495,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 .books-grid-home {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px;
+  gap: 34px;
 }
 
 .books-head {
@@ -538,12 +538,6 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 0.06em;
-}
-
-.books-grid-home {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px;
 }
 
 .book-card-home {
