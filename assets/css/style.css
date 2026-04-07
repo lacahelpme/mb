@@ -1176,9 +1176,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 }
 
 .hero-shell::after {
-  top: 96px;
-  right: 24px;
-  width: 420px;
+  display: none;
 }
 
 .hero-panel {
