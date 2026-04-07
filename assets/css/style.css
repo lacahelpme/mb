@@ -595,8 +595,9 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 }
 
 .video-teaser-grid {
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
   align-items: center;
 }
 
