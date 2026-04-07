@@ -9,14 +9,12 @@ collections:
   books:
     output: false
   publications:
-    output: true
-    permalink: /publications/:name/
+    output: false
   musings:
     output: true
     permalink: /musings/:name/
   videos:
-    output: true
-    permalink: /videos/:name/
+    output: false
 
 defaults:
   - scope:
@@ -24,18 +22,9 @@ defaults:
     values:
       layout: default
       lang: en
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: article
+
   - scope:
       path: ""
       type: musings
-    values:
-      layout: article
-  - scope:
-      path: ""
-      type: videos
     values:
       layout: article

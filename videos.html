@@ -1,39 +1,56 @@
 ---
 layout: default
-title: "Videos"
-seo_title: "Videos | Michael R. Berthold"
-seo_description: "Conference talks and video appearances by Michael R. Berthold."
+title: Videos
+seo_title: Videos | Michael R. Berthold
+seo_description: Talks, interviews, presentations, and selected videos by Michael R. Berthold.
+lang: en
+permalink: /videos/
 ---
 
-<section class="page-hero">
-  <div class="container narrow">
-    <h1>Conference Talks &amp; Presentations</h1>
-    <p class="lead">All videos listed automatically by date.</p>
+<section class="page-hero page-hero-dark">
+  <div class="container">
+    <p class="page-kicker">VIDEOS</p>
+    <h1 class="page-title">Videos</h1>
+    <p class="page-intro">
+      Talks, interviews, presentations, and selected appearances exploring AI, data science, innovation, and applied intelligence.
+    </p>
   </div>
 </section>
 
-<section class="section">
+<section class="section videos-listing">
   <div class="container">
-    <div class="stack-list">
-      {% assign all_videos = site.videos | sort: 'date' | reverse %}
-      {% for item in all_videos %}
-      <article class="video-list-card">
-        <div>
-          {% if item.video_file %}
-          <video controls preload="metadata">
-            <source src="{{ item.video_file | relative_url }}" type="video/mp4">
-          </video>
-          {% elsif item.video_embed %}
-          <div class="embed-wrap">
-            <iframe src="{{ item.video_embed }}" title="{{ item.title }}" loading="lazy" allowfullscreen></iframe>
-          </div>
+    {% assign all_videos = site.videos | sort: 'date' | reverse %}
+    <div class="videos-grid">
+      {% for video in all_videos %}
+      <article class="video-card">
+        <div class="video-card-media">
+          {% if video.video_embed and video.video_embed != "" %}
+            <iframe src="{{ video.video_embed }}" title="{{ video.title }}" loading="lazy" allowfullscreen></iframe>
+          {% elsif video.video_file %}
+            <video controls preload="metadata">
+              <source src="{{ video.video_file | relative_url }}" type="video/mp4">
+            </video>
+          {% elsif video.thumbnail %}
+            <img src="{{ video.thumbnail | relative_url }}" alt="{{ video.alt | default: video.title }}">
           {% endif %}
         </div>
-        <div>
-          <h2>{{ item.title }}</h2>
-          <p class="meta">{{ item.event_name }} · {{ item.date | date: "%d %B %Y" }}</p>
-          <p>{{ item.excerpt }}</p>
-          <a class="button default" href="{{ item.url | relative_url }}">Open video page</a>
+
+        <div class="video-card-body">
+          <h2 class="video-card-title">{{ video.title }}</h2>
+
+          {% if video.date %}
+          <p class="video-card-date">{{ video.date | date: "%B %d, %Y" }}</p>
+          {% endif %}
+
+          {% if video.excerpt %}
+          <p class="video-card-excerpt">{{ video.excerpt }}</p>
+          {% endif %}
+
+          {% if video.external_url %}
+          <a class="button-outline" href="{{ video.external_url }}" target="_blank" rel="noopener noreferrer">
+            {{ video.button_label | default: "Watch externally" }}
+          </a>
+          {% endif %}
         </div>
       </article>
       {% endfor %}
