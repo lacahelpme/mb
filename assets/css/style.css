@@ -1167,31 +1167,31 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   }
 
   .hero-shell {
-    display: grid;
-    grid-template-columns: 1fr 540px;
-    align-items: stretch;
-    min-height: 584px;
-    gap: 0;
-    position: relative;
-  }
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  align-items: stretch;
+  min-height: 584px;
+  gap: 0;
+  position: relative;
+}
 
-  .hero-shell::after {
-    top: 96px;
-    right: 24px;
-    width: 540px;
-  }
+.hero-shell::after {
+  top: 96px;
+  right: 24px;
+  width: 460px;
+}
+
+.hero-panel {
+  margin: 0 24px 0 0;
+  max-width: 460px;
+  min-height: 100%;
+  height: auto;
+  padding: 116px 28px 56px 40px;
+}
 
   .hero-visual {
     min-height: 520px;
     justify-content: center;
-  }
-
-  .hero-panel {
-    margin: 0 24px 0 0;
-    max-width: 540px;
-    min-height: 100%;
-    height: auto;
-    padding: 116px 28px 56px;
   }
 
   .article-title {
