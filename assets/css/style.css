@@ -293,7 +293,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 .hero-panel {
   height: auto;
   min-height: 100%;
-  padding: 122px 52px 72px;
+  padding: 122px 52px 72px 72px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 100%;
@@ -321,7 +321,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   line-height: 1.1;
   font-weight: 600;
   margin-bottom: 18px;
-  max-width: 12ch;
+  white-space: nowrap;
 }
 
 .hero-title {
