@@ -271,12 +271,8 @@ h4:last-child {
 }
 
 .hero-shell {
-  display: grid;
-  grid-template-columns: 1fr 500px;
-  align-items: stretch;
-  min-height: 760px;
-  gap: 0;
   position: relative;
+  min-height: 760px;
 }
 
 .hero-shell::after {
@@ -311,20 +307,20 @@ h4:last-child {
 }
 
 .hero-panel {
+  position: absolute;
+  top: 78px;
+  right: 48px;
+  bottom: 0;
+  width: 500px;
+
   display: grid;
   grid-template-rows: auto 1fr auto;
-  width: 100%;
-  max-width: 500px;
-  min-height: 100%;
-  padding: 118px 30px 72px;
-  align-self: stretch;
-  justify-self: end;
-  margin: 0 48px 0 0;
+
+  padding: 34px 40px 72px;
+
   background: transparent;
-  position: relative;
-  z-index: 3;
-  grid-column: 2;
   border: none;
+  z-index: 3;
 }
 
 .hero-copy {
@@ -339,7 +335,7 @@ h4:last-child {
   font-size: 0.98rem;
   line-height: 1.1;
   font-weight: 600;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 .hero-title {
