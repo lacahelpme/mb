@@ -1,128 +1,220 @@
 ---
 layout: default
-title: "Home"
-seo_title: "Michael R. Berthold | Computer Scientist"
-seo_description: "Official website of Michael R. Berthold featuring books, publications, musings, videos, and contact information."
+title: Home
+seo_title: Michael R. Berthold | Computer Scientist
+seo_description: Computer scientist, speaker, publications, books, videos and musings.
+lang: en
+permalink: /
 ---
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="eyebrow">About me</p>
-      <h1>Hello</h1>
-      <p class="hero-subtitle">I’m Michael Berthold, computer scientist.</p>
-      <a class="button accent" href="#about">Get to know me</a>
+<section class="hero-band">
+  <div class="container hero-shell">
+    <div class="hero-visual">
+      <img src="{{ '/assets/img/general/Michael-Berthold-About-Me.jpg' | relative_url }}" alt="Portrait illustration of Michael Berthold">
     </div>
-    <div class="hero-media placeholder-box">Hero image placeholder</div>
-  </div>
-</section>
 
-<section class="stats">
-  <div class="container stats-grid">
-    <article class="stat-card accent"><strong>250+</strong><span>Scientific Publications</span></article>
-    <article class="stat-card"><strong>3+</strong><span>Books and Textbooks</span></article>
-    <article class="stat-card dark"><strong>30+</strong><span>Years in Data Science &amp; AI</span></article>
-    <article class="stat-card mid"><strong>4+</strong><span>Awards and honors</span></article>
-  </div>
-</section>
+    <div class="hero-panel">
+      <p class="hero-kicker">Computer Scientist</p>
+      <h1 class="hero-title">
+        <span>Michael R.</span>
+        <span>Berthold</span>
+      </h1>
 
-<section class="section" id="about">
-  <div class="container split-grid">
-    <div>
-      <h2>About Me</h2>
-      <p>Replace this with the final introductory copy for the homepage about section.</p>
-      <p>Use this block for concise positioning, biography highlights, and key value points.</p>
-    </div>
-    <div class="stack-cards">
-      <div class="outline-card">Speaker</div>
-      <div class="outline-card">Publicist</div>
-      <div class="outline-card">AI &amp; Data Science Pioneer</div>
+      <div class="hero-actions">
+        <a class="button button-accent" href="{{ '/#about' | relative_url }}">GET TO KNOW ME</a>
+        <span class="hero-arrow" aria-hidden="true">↓</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section accent-band">
-  <div class="container split-grid">
-    <div>
-      <h2>Books</h2>
-      <p>Latest 3 books are shown automatically.</p>
+<section class="about-light section" id="about">
+  <div class="container about-light-grid">
+    <div class="about-main">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </p>
     </div>
-    <div class="card-grid three">
+
+    <div class="about-side">
+      <div class="about-side-item">
+        <h3>Speaker</h3>
+        <p>Lorem Ipsum is simply dummy text</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+      </div>
+
+      <div class="about-side-item">
+        <h3>Publicist</h3>
+        <p>Lorem Ipsum is simply dummy text</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+      </div>
+
+      <div class="about-side-item">
+        <h3>AI &amp; Data Science Pioneer</h3>
+        <p>Lorem Ipsum is simply dummy text</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bio-band section">
+  <div class="container bio-grid">
+    <div class="bio-image">
+      <img src="{{ '/assets/img/general/Michael-Berthold-About-Me.jpg' | relative_url }}" alt="Portrait illustration of Michael Berthold">
+    </div>
+
+    <div class="bio-copy">
+      <div class="bio-row">
+        <div class="bio-label">Bio</div>
+        <div class="bio-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem.
+        </div>
+      </div>
+
+      <div class="bio-row">
+        <div class="bio-label">My Approach</div>
+        <div class="bio-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="books-band section">
+  <div class="container">
+    <div class="books-head">
+      <h2 class="section-title section-title-light">Books and Textbooks</h2>
+      <div class="books-tip">
+        <span class="books-tip-label">Tip</span>
+        <span>You have full access to this open access book: <strong>Bisociative Knowledge Discovery</strong></span>
+      </div>
+    </div>
+
+    <div class="books-grid books-grid-home">
       {% assign latest_books = site.books | sort: 'date' | reverse | slice: 0, 3 %}
-      {% for item in latest_books %}
-      <article class="content-card">
-        {% if item.cover %}<img src="{{ item.cover | relative_url }}" alt="{{ item.alt | default: item.title }}">{% endif %}
-        <h3>{{ item.title }}</h3>
-        <p class="meta">{{ item.author }} · {{ item.year }}</p>
-        <p>{{ item.excerpt }}</p>
-        <a class="button {% if item.button_style == 'accent' %}accent{% else %}default{% endif %}" href="{{ item.external_url }}" target="_blank" rel="noopener noreferrer">{{ item.button_label }}</a>
+      {% for book in latest_books %}
+      <article class="book-card-home">
+        <div class="book-card-image">
+          <img src="{{ book.cover | relative_url }}" alt="{{ book.alt }}">
+        </div>
+
+        <div class="book-card-content">
+          <h3 class="book-card-title">{{ book.title }}</h3>
+          <p class="book-card-authors">{{ book.author }}</p>
+          <p class="book-card-year">({{ book.year }})</p>
+          <p class="book-card-excerpt">{{ book.excerpt }}</p>
+
+          <a class="button-outline {% if book.button_style == 'accent' %}button-outline-accent{% endif %}" href="{{ book.external_url }}" target="_blank" rel="noopener noreferrer">
+            {{ book.button_label }}
+          </a>
+        </div>
       </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container split-grid">
-    <div>
-      <h2>Latest Video</h2>
-      <p>The most recent video appears automatically.</p>
+<section class="video-teaser section">
+  <div class="container video-teaser-grid">
+    <div class="video-teaser-copy">
+      <h2 class="video-teaser-title">Step into the world of data, insights, and intelligent systems</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+      <a class="button button-accent" href="{{ '/videos/' | relative_url }}">SEE VIDEOS</a>
     </div>
-    <div>
+
+    <div class="video-teaser-media">
       {% assign latest_video = site.videos | sort: 'date' | reverse | first %}
-      {% if latest_video %}
-      <article class="video-card">
-        {% if latest_video.video_file %}
+      {% if latest_video.video_embed and latest_video.video_embed != "" %}
+        <iframe src="{{ latest_video.video_embed }}" title="{{ latest_video.title }}" loading="lazy" allowfullscreen></iframe>
+      {% else %}
         <video controls preload="metadata">
           <source src="{{ latest_video.video_file | relative_url }}" type="video/mp4">
         </video>
-        {% elsif latest_video.video_embed %}
-        <div class="embed-wrap">
-          <iframe src="{{ latest_video.video_embed }}" title="{{ latest_video.title }}" loading="lazy" allowfullscreen></iframe>
-        </div>
-        {% endif %}
-        <h3>{{ latest_video.title }}</h3>
-        <p class="meta">{{ latest_video.event_name }} · {{ latest_video.date | date: "%d %B %Y" }}</p>
-      </article>
       {% endif %}
+      <p class="video-teaser-caption">LOREM IPSUM IS SIMPLY DUMMY TEXT</p>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container split-grid">
-    <div>
-      <h2>Recent Musings</h2>
-      <p>Latest 3 musings shown automatically.</p>
+<section class="musings-band section">
+  <div class="container">
+    <div class="musings-band-head">
+      <a class="button button-accent" href="{{ '/musings/' | relative_url }}">SEE ALL MUSINGS</a>
+      <h2 class="section-title section-title-light">Ideas &amp; Perspectives</h2>
     </div>
-    <div class="card-grid three">
+
+    <div class="musings-band-grid">
       {% assign latest_musings = site.musings | sort: 'date' | reverse | slice: 0, 3 %}
-      {% for item in latest_musings %}
-      <article class="tile-card {% if forloop.first %}accent{% else %}dark{% endif %}">
-        <p class="meta">{{ item.date | date: "%d %B %Y" }}</p>
-        <h3>{{ item.title }}</h3>
-        <a href="{{ item.url | relative_url }}">Read more</a>
+      {% for post in latest_musings %}
+      <article class="musing-tile {% if forloop.first %}musing-tile-accent{% elsif forloop.index == 2 %}musing-tile-mid{% else %}musing-tile-light{% endif %}">
+        <div class="musing-tile-top">
+          <div class="musing-tile-number">{{ forloop.index | prepend: '0' }}</div>
+          <div class="musing-tile-arrow">→</div>
+        </div>
+
+        <div class="musing-tile-body">
+          <h3>{{ post.title }}</h3>
+          <p class="musing-tile-date">{{ post.date | date: "%B %d, %Y" }}</p>
+        </div>
+
+        <div class="musing-tile-actions">
+          <a class="button-outline {% if forloop.first %}button-outline-dark{% else %}button-outline-light{% endif %}" href="{{ post.url | relative_url }}">Read more</a>
+        </div>
+
+        <p class="musing-tile-excerpt">{{ post.excerpt }}</p>
       </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container split-grid">
-    <div>
-      <h2>Publications</h2>
-      <p>Latest 4 publications shown automatically.</p>
+<section class="publications-band section">
+  <div class="container">
+    <div class="publications-band-head">
+      <h2 class="section-title section-title-light">Publications</h2>
+      <div class="publications-band-actions">
+        <a class="button button-dark" href="{{ '/contact/' | relative_url }}">PRESS CONTACT</a>
+        <a class="button button-accent" href="{{ '/publications/' | relative_url }}">ALL PUBLICATIONS</a>
+      </div>
     </div>
-    <div class="card-grid two">
+
+    <div class="publications-home-grid">
       {% assign latest_publications = site.publications | sort: 'date' | reverse | slice: 0, 4 %}
-      {% for item in latest_publications %}
-      <article class="content-card">
-        {% if item.cover %}<img src="{{ item.cover | relative_url }}" alt="{{ item.alt | default: item.title }}">{% endif %}
-        <p class="meta">{{ item.source_name }} · {{ item.date | date: "%d %B %Y" }}</p>
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.excerpt }}</p>
-        <a class="button default" href="{{ item.url | relative_url }}">{{ item.button_label }}</a>
+      {% for post in latest_publications %}
+      <article class="publication-home-card">
+        <div class="publication-home-thumb">
+          <img src="{{ post.cover | relative_url }}" alt="{{ post.alt }}">
+        </div>
+
+        <div class="publication-home-body">
+          {% if post.source_name %}<p class="publication-home-source">{{ post.source_name }}</p>{% endif %}
+          <h3 class="publication-home-title">{{ post.title }}</h3>
+          <p class="publication-home-date">{{ post.date | date: "%-d %B %Y" }}</p>
+          <p class="publication-home-excerpt">{{ post.excerpt }}</p>
+          <a class="button-outline button-outline-light" href="{{ post.url | relative_url }}">Read now</a>
+        </div>
       </article>
       {% endfor %}
     </div>
