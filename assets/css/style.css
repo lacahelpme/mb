@@ -306,14 +306,6 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   z-index: 3;
   grid-column: 2;
   border: none;
-  gap: 100px;
-}
-
-.hero-copy {
-  max-width: 100%;
-  align-self: start;
-  padding-top: 0;
-  margin-bottom: 0;
 }
 
 .hero-kicker {
@@ -322,7 +314,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   font-size: 0.98rem;
   line-height: 1.1;
   font-weight: 600;
-  margin-bottom: 18px;
+  margin: 0 0 18px 0;
   white-space: nowrap;
 }
 
