@@ -265,7 +265,7 @@ h4:last-child {
 
 .hero-shell {
   display: grid;
-  grid-template-columns: 1.02fr 0.98fr;
+  grid-template-columns: 1fr 540px;
   align-items: stretch;
   min-height: 584px;
   gap: 0;
@@ -273,9 +273,11 @@ h4:last-child {
 }
 
 .hero-visual {
-  position: relative;
-  min-height: 584px;
+  position: absolute;
+  inset: 0;
+  min-height: 100%;
   overflow: hidden;
+  z-index: 1;
 }
 
 .hero-visual img {
@@ -284,26 +286,29 @@ h4:last-child {
   max-width: none;
   max-height: none;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
 }
 
 .hero-panel {
   border: 1.5px solid rgba(255, 255, 255, 0.55);
-  min-height: 520px;
-  padding: 28px 28px 26px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 28px 0 0 0;
+  min-height: 100%;
+  padding: 44px 34px 30px;
+  display: grid;
+  grid-template-rows: 1fr auto;
   width: 100%;
   max-width: 540px;
-  align-self: start;
+  align-self: stretch;
   justify-self: end;
+  margin: 0;
   background: transparent;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-copy {
   max-width: 100%;
+  align-self: start;
+  padding-top: 8px;
 }
 
 .hero-kicker {
@@ -312,12 +317,12 @@ h4:last-child {
   font-size: 0.98rem;
   line-height: 1.1;
   font-weight: 600;
-  margin-bottom: 28px;
+  margin-bottom: 14px;
 }
 
 .hero-title {
   font-size: clamp(3.7rem, 6vw, 5.15rem);
-  line-height: 0.9;
+  line-height: 0.88;
   letter-spacing: -0.07em;
   font-weight: 400;
   margin: 0;
@@ -1181,9 +1186,13 @@ a:focus-visible {
   }
 
   .hero-shell {
-    min-height: auto;
-    gap: 20px;
-  }
+  display: grid;
+  grid-template-columns: 1fr 540px;
+  align-items: stretch;
+  min-height: 584px;
+  gap: 0;
+  position: relative;
+}
 
   .hero-visual {
     min-height: 520px;
