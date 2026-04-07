@@ -596,17 +596,17 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 
 .video-teaser-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-  gap: 44px;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+  gap: 40px;
   align-items: start;
 }
 
 .video-teaser-title {
-  font-size: clamp(2.3rem, 4.2vw, 4.35rem);
+  font-size: clamp(1.9rem, 3.2vw, 3.35rem);
   line-height: 0.96;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.05em;
   font-weight: 800;
-  max-width: 10.5ch;
+  max-width: 13.5ch;
   margin-bottom: 1.35rem;
 }
 
