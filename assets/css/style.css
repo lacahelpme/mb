@@ -485,6 +485,17 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 .books-band {
   background: #666666;
   color: var(--white);
+  padding: 72px 0 88px;
+}
+
+.books-band .container {
+  width: min(calc(100% - 96px), var(--container));
+}
+
+.books-grid-home {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
 }
 
 .books-head {
