@@ -596,22 +596,22 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 
 .video-teaser-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 56px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 44px;
+  align-items: start;
 }
 
 .video-teaser-title {
-  font-size: clamp(2.3rem, 4.5vw, 4.6rem);
-  line-height: 0.98;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.3rem, 4.2vw, 4.35rem);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
   font-weight: 800;
-  max-width: 8.6ch;
-  margin-bottom: 1.2rem;
+  max-width: 10.5ch;
+  margin-bottom: 1.35rem;
 }
 
 .video-teaser-copy p {
-  max-width: 430px;
+  max-width: 540px;
   color: #5a5a5a;
   margin-bottom: 1.45rem;
   font-size: 0.96rem;
@@ -621,7 +621,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 .video-teaser-media iframe,
 .video-teaser-media img {
   width: 100%;
-  aspect-ratio: 1.42 / 1;
+  aspect-ratio: 1.5 / 1;
   object-fit: cover;
   border: 0;
 }
@@ -633,7 +633,6 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   font-size: 0.78rem;
   letter-spacing: 0.05em;
 }
-
 /* Musings home */
 
 .musings-band {
@@ -1413,6 +1412,19 @@ a:focus-visible {
   .video-card-media img {
     aspect-ratio: 16 / 10;
   }
+
+  .video-teaser-grid {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.video-teaser-title {
+  max-width: 8.8ch;
+  font-size: clamp(2.2rem, 10vw, 3.4rem);
+  line-height: 0.98;
+}
+
+  
 
   .footer-image {
     justify-content: center;
