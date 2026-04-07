@@ -313,6 +313,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   max-width: 100%;
   align-self: start;
   padding-top: 0;
+  margin-bottom: 42px;
 }
 
 .hero-kicker {
