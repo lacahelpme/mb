@@ -94,6 +94,8 @@ h4 {
   font-size: var(--fs-nav);
   font-weight: 800;
   border: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .button-accent {
@@ -150,17 +152,20 @@ h4 {
 .header-inner {
   min-height: 104px;
   display: grid;
-  grid-template-columns: 120px 1fr auto;
+  grid-template-columns: 150px 1fr auto;
   align-items: center;
   gap: 24px;
 }
 
-.logo {
-  font-size: 5.2rem;
-  line-height: 1;
-  font-weight: 400;
-  color: var(--accent);
-  letter-spacing: -0.07em;
+.logo-image {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-image img {
+  width: 110px;
+  height: auto;
+  display: block;
 }
 
 .primary-nav ul {
@@ -175,6 +180,13 @@ h4 {
 .primary-nav a {
   font-size: var(--fs-nav);
   color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.primary-nav a.active {
+  color: var(--accent);
 }
 
 .header-cta {
@@ -208,7 +220,9 @@ h4 {
 }
 
 .hero-panel {
-  border: 2px solid rgba(255,255,255,0.65);
+  border-top: 2px solid rgba(255,255,255,0.65);
+  border-left: 2px solid rgba(255,255,255,0.65);
+  border-right: 2px solid rgba(255,255,255,0.65);
   min-height: 560px;
   padding: 44px 42px 38px;
   display: flex;
@@ -611,6 +625,22 @@ h4 {
   font-size: 1.2rem;
 }
 
+.footer-contact-list-icons {
+  gap: 18px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-contact-item img {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+}
+
 .footer-image {
   display: flex;
   justify-content: flex-end;
@@ -668,8 +698,8 @@ h4 {
     padding: 14px 0;
   }
 
-  .logo {
-    font-size: 4rem;
+  .logo-image img {
+    width: 88px;
   }
 
   .primary-nav ul {
