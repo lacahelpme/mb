@@ -1205,6 +1205,10 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
     justify-content: center;
   }
 
+  .hero-arrow {
+    display: none;
+  }
+
   .article-title {
     max-width: 100%;
   }
