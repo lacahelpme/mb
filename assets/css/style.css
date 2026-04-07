@@ -300,7 +300,8 @@ h4:last-child {
   border-left: 1.5px solid rgba(255, 255, 255, 0.55);
   border-right: 1.5px solid rgba(255, 255, 255, 0.55);
   border-bottom: none;
-  min-height: 600px;
+  min-height: auto;
+  height: 520px;
   padding: 48px 30px 34px;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -355,6 +356,8 @@ h4:last-child {
   justify-content: space-between;
   gap: 24px;
   margin-top: 34px;
+  align-self: start;
+  margin-top: 40px;
 }
 
 .hero-actions .button {
