@@ -1,26 +1,44 @@
 ---
 layout: default
-title: "Musings"
-seo_title: "Musings | Michael R. Berthold"
-seo_description: "Recent musings and reflections by Michael R. Berthold."
+title: Musings
+seo_title: Musings | Michael R. Berthold
+seo_description: Essays, reflections, and perspectives by Michael R. Berthold.
+lang: en
+permalink: /musings/
 ---
 
-<section class="page-hero">
-  <div class="container narrow">
-    <h1>Recent Musings</h1>
-    <p class="lead">All musings listed automatically by date.</p>
+<section class="page-hero page-hero-dark">
+  <div class="container">
+    <p class="page-kicker">MUSINGS</p>
+    <h1 class="page-title">Musings</h1>
+    <p class="page-intro">
+      Thoughts, essays, and reflections on data science, AI, innovation, leadership, and the broader questions around technology.
+    </p>
   </div>
 </section>
 
-<section class="section">
+<section class="section musings-listing">
   <div class="container">
-    <div class="card-grid three">
-      {% assign all_musings = site.musings | sort: 'date' | reverse %}
-      {% for item in all_musings %}
-      <article class="tile-card {% if forloop.first %}accent{% else %}dark{% endif %}">
-        <p class="meta">{{ item.date | date: "%d %B %Y" }}</p>
-        <h3>{{ item.title }}</h3>
-        <a href="{{ item.url | relative_url }}">Read more</a>
+    {% assign all_musings = site.musings | sort: 'date' | reverse %}
+    <div class="musings-list-grid">
+      {% for post in all_musings %}
+      <article class="musing-list-card">
+        <div class="musing-list-meta">
+          <span class="musing-list-number">{{ forloop.index | prepend: '0' }}</span>
+          <span class="musing-list-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        </div>
+
+        <div class="musing-list-body">
+          <h2 class="musing-list-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+
+          {% if post.excerpt %}
+          <p class="musing-list-excerpt">{{ post.excerpt }}</p>
+          {% endif %}
+
+          <a class="button-outline" href="{{ post.url | relative_url }}">Read more</a>
+        </div>
       </article>
       {% endfor %}
     </div>
