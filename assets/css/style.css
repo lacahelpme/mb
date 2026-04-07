@@ -606,7 +606,6 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   line-height: 0.96;
   letter-spacing: -0.05em;
   font-weight: 800;
-  max-width: 13.5ch;
   margin-bottom: 1.35rem;
 }
 
