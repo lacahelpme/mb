@@ -595,10 +595,9 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 }
 
 .video-teaser-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
-  gap: 40px;
-  align-items: start;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
 }
 
 .video-teaser-title {
