@@ -272,7 +272,7 @@ h4:last-child {
 
 .hero-shell {
   display: grid;
-  grid-template-columns: minmax(420px, 620px) 1fr;
+  grid-template-columns: 1fr 500px;
   align-items: stretch;
   min-height: 760px;
   gap: 0;
@@ -305,7 +305,7 @@ h4:last-child {
   max-width: 500px;
   align-self: end;
   justify-self: end;
-  margin: 124px 0 0 0;
+  margin: 124px 48px 0 0;
   background: transparent;
   position: relative;
   z-index: 2;
