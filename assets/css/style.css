@@ -293,9 +293,10 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 .hero-panel {
   height: auto;
   min-height: 100%;
-  padding: 122px 52px 72px 72px;
+  padding: 142px 52px 72px 72px;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 500px;
   align-self: stretch;
@@ -345,10 +346,10 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 
 .hero-actions {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin-top: 0;
+  margin-top: 32px;
 }
 
 .hero-actions .button {
