@@ -10,18 +10,8 @@ alt: "Cover image for Example Publication Title"
 button_label: "Read now"
 source_name: "Example Source"
 author_line: "By Michael R. Berthold"
+external_url: "https://example.com/article"
 lang: en
 seo_title: "Example Publication Title"
 seo_description: "SEO description for the publication."
 ---
-
-<!--
-INSTRUCTIONS:
-1. Copy this file into /_publications/
-2. Rename it using the date and slug
-3. Fill in all metadata
-4. The page title is rendered automatically as H1 by the layout
-5. Replace the lorem ipsum below with the final article content
--->
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
