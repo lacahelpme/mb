@@ -48,12 +48,12 @@ What drives me is the opportunity to help others navigate challenges, whether th
 
       <div class="about-side-item">
         <h3>Publicist</h3>
-        <p>In my publications, I explore current developments in data science and AI, providing practical, hands-on insights. </p>
+        <p>In my publications, I explore current developments in data science and AI, providing practical, hands-on insights.</p>
       </div>
 
       <div class="about-side-item">
         <h3>AI &amp; Data Science Pioneer</h3>
-        <p>Advancing data science and AI is a constant focus of my work. </p>
+        <p>Advancing data science and AI is a constant focus of my work.</p>
       </div>
     </div>
   </div>
@@ -97,7 +97,6 @@ Until 2025, CEO of the co-founded data analytics platform KNIME, which has grown
          target="_blank"
          rel="noopener noreferrer">
         <span class="books-tip-label">Tip</span>
-
         <span>
           You have full access to this
           <span class="books-tip-highlight">open access</span>
@@ -105,8 +104,6 @@ Until 2025, CEO of the co-founded data analytics platform KNIME, which has grown
         </span>
       </a>
     </div>
-  </div>
-</section>
 
     <div class="books-grid books-grid-home">
       {% assign latest_books = site.books | sort: 'date' | reverse | slice: 0, 3 %}
@@ -122,7 +119,7 @@ Until 2025, CEO of the co-founded data analytics platform KNIME, which has grown
           <p class="book-card-excerpt">{{ book.excerpt }}</p>
 
           {% if book.external_url %}
-          <a class="button-outline {% if book.button_style == 'accent' %}button-outline-accent{% endif %}"
+          <a class="button-outline {% if book.button_style == 'accent' %}button-outline-accent{% else %}button-outline-light{% endif %}"
              href="{{ book.external_url }}"
              target="_blank"
              rel="noopener noreferrer">
