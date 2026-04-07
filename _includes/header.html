@@ -1,18 +1,20 @@
 <header class="site-header site-header-dark">
   <div class="container header-inner">
-    <a class="logo" href="{{ '/' | relative_url }}">MB</a>
+    <a class="logo logo-image" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/img/general/Michael-Berthold-Logo.png' | relative_url }}" alt="MB logo">
+    </a>
 
     <nav class="primary-nav" aria-label="Primary navigation">
       <ul>
-        <li><a href="{{ '/#about' | relative_url }}">About Me</a></li>
-        <li><a href="{{ '/musings/' | relative_url }}">Musings</a></li>
-        <li><a href="{{ '/videos/' | relative_url }}">Videos</a></li>
-        <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+        <li><a href="{{ '/#about' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">ABOUT ME</a></li>
+        <li><a href="{{ '/musings/' | relative_url }}" class="{% if page.url contains '/musings' %}active{% endif %}">MUSINGS</a></li>
+        <li><a href="{{ '/videos/' | relative_url }}" class="{% if page.url contains '/videos' %}active{% endif %}">VIDEOS</a></li>
+        <li><a href="{{ '/publications/' | relative_url }}" class="{% if page.url contains '/publications' %}active{% endif %}">PUBLICATIONS</a></li>
       </ul>
     </nav>
 
     <div class="header-cta">
-      <a class="button button-accent button-header" href="{{ '/contact/' | relative_url }}">Contact</a>
+      <a class="button button-accent button-header" href="{{ '/contact/' | relative_url }}">CONTACT</a>
     </div>
   </div>
 </header>
