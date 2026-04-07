@@ -346,11 +346,11 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 }
 
 .hero-actions {
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin-top: 32px;
 }
 
 .hero-actions .button {
