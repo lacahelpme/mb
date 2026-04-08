@@ -665,10 +665,12 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 }
 
 .musing-tile {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
+  display: grid;
+  align-content: space-between;
+  gap: 18px;
+  padding: 20px 20px 18px;
+  border-radius: 18px;
+  min-height: 214px;
 }
 
 .musing-tile-accent {
