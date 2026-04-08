@@ -1194,60 +1194,75 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 .site-footer {
   background: var(--black);
   color: var(--white);
+  overflow: hidden;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 0.92fr;
+  grid-template-columns: 1fr 0.98fr;
   gap: 24px;
   align-items: end;
-  min-height: 430px;
+  min-height: 520px;
 }
 
 .footer-copy {
-  padding: 44px 0 32px;
+  padding: 56px 0 40px;
 }
 
 .footer-copy h2 {
-  font-size: clamp(3.85rem, 8vw, 6.5rem);
-  line-height: 0.88;
+  font-family: var(--font-base);
+  font-size: clamp(4.2rem, 8vw, 7rem);
+  line-height: 0.9;
   letter-spacing: -0.075em;
-  margin-bottom: 1.8rem;
+  margin-bottom: 2rem;
   font-weight: 800;
+  color: var(--white);
 }
 
 .footer-contact-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   font-size: 1rem;
 }
 
 .footer-contact-list-icons {
-  gap: 14px;
+  gap: 18px;
 }
 
 .footer-contact-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.footer-contact-item a,
+.footer-contact-item span {
+  color: var(--white);
 }
 
 .footer-contact-item img {
-  width: 18px;
-  height: 18px;
-  flex: 0 0 18px;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-image {
   display: flex;
   justify-content: flex-end;
   align-items: end;
+  height: 100%;
 }
 
 .footer-image img {
-  max-height: 410px;
+  max-height: 500px;
   width: auto;
   object-fit: contain;
+  object-position: bottom right;
+  display: block;
 }
 
 .footer-accent-bar {
@@ -1522,7 +1537,7 @@ a:focus-visible {
   }
 
   .footer-image img {
-    max-height: 280px;
+    max-height: 320px;
   }
 
   .publication-list-card {
