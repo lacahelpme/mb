@@ -632,6 +632,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   font-size: 0.78rem;
   letter-spacing: 0.05em;
 }
+
 /* Musings home */
 
 .musings-band {
@@ -639,18 +640,27 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   color: var(--white);
 }
 
+.musings-band .container {
+  width: min(calc(100% - 88px), var(--container));
+}
+
 .musings-band-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.1rem;
 }
 
 .musings-band-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 24px;
+}
+
+.musing-home-card {
+  display: grid;
+  align-content: start;
 }
 
 .musing-tile {
@@ -658,7 +668,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   gap: 18px;
   padding: 20px 20px 18px;
   border-radius: 18px;
-  min-height: 330px;
+  min-height: 214px;
   align-content: start;
 }
 
@@ -668,12 +678,12 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 }
 
 .musing-tile-mid {
-  background: #606060;
+  background: #6b6b6b;
   color: var(--white);
 }
 
 .musing-tile-light {
-  background: #f3f3f3;
+  background: #e9ecef;
   color: var(--black);
 }
 
@@ -691,12 +701,12 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 }
 
 .musing-tile-body h3 {
-  font-size: clamp(1.22rem, 1.8vw, 1.55rem);
-  line-height: 1.02;
+  font-size: clamp(1.12rem, 1.6vw, 1.38rem);
+  line-height: 1.04;
   letter-spacing: -0.035em;
   font-weight: 800;
-  max-width: 11ch;
-  margin-bottom: 0.75rem;
+  max-width: 12ch;
+  margin-bottom: 0.7rem;
   text-transform: uppercase;
 }
 
@@ -705,10 +715,21 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 }
 
 .musing-tile-excerpt {
-  margin-top: auto;
+  margin: 14px 0 14px;
   font-size: 0.93rem;
   line-height: 1.5;
   opacity: 0.95;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.musing-home-card .musing-tile-actions {
+  margin-top: 0;
+}
+
+.musing-home-card .button-outline {
+  justify-self: start;
+  min-height: 40px;
+  padding: 0 18px;
 }
 
 /* Publications home */
@@ -1276,6 +1297,14 @@ a:focus-visible {
     max-width: 100%;
   }
 
+    .musings-band .container {
+    width: min(calc(100% - 64px), var(--container));
+  }
+
+  .musings-band-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .footer-grid {
     min-height: auto;
   }
@@ -1423,6 +1452,21 @@ a:focus-visible {
   line-height: 0.98;
 }
 
+    .musings-band .container {
+    width: min(calc(100% - 28px), var(--container));
+  }
+
+  .musings-band-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .musing-tile {
+    min-height: auto;
+  }
+
+  .musing-tile-body h3 {
+    max-width: none;
+  }
   
 
   .footer-image {
