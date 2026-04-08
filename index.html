@@ -208,7 +208,10 @@ Until 2025, CEO of the co-founded data analytics platform KNIME, which has grown
     <div class="publications-home-grid">
       {% assign latest_publications = site.publications | sort: 'date' | reverse | slice: 0, 4 %}
       {% for post in latest_publications %}
-      <a class="publication-home-card" href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ '/publications/' | relative_url }}{% endif %}" {% if post.external_url %}target="_blank" rel="noopener noreferrer"{% endif %}>
+      <a class="publication-home-card"
+         href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ '/publications/' | relative_url }}{% endif %}"
+         {% if post.external_url %}target="_blank" rel="noopener noreferrer"{% endif %}>
+
         <div class="publication-home-thumb">
           <img src="{{ post.cover | relative_url }}" alt="{{ post.alt }}">
         </div>
@@ -221,8 +224,10 @@ Until 2025, CEO of the co-founded data analytics platform KNIME, which has grown
           <h3 class="publication-home-title">{{ post.title }}</h3>
           <p class="publication-home-date">{{ post.date | date: "%-d %B %Y" }}</p>
           <p class="publication-home-excerpt">{{ post.excerpt }}</p>
+
           <p class="publication-home-readmore">Read more</p>
         </div>
+
       </a>
       {% endfor %}
     </div>
