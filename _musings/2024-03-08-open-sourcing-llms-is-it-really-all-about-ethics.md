@@ -1,7 +1,7 @@
 ---
 title: "Open Sourcing LLMs – is it really all about ethics?"
 date: 2024-03-08
-excerpt: "Should GenAI be open source? That debate typically focuses on the risks and trade-offs."
+excerpt: "Should GenAI be open source? That debate typically focuses on the risks of giving everybody with sufficient compute resources the ability to..."
 author_line: "By Michael R. Berthold"
 lang: en
 seo_title: "Open Sourcing LLMs – is it really all about ethics?"

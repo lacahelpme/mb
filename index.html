@@ -32,48 +32,28 @@ permalink: /
   <div class="container about-light-grid">
     <div class="about-main">
       <h2 class="section-title">About Me</h2>
-      <p>
-        My journey has taken me from academic
-research both in Europe and the US to small and
-dynamic startups in Silicon Valley, from
-coordinating European research projects to
-scaling a company from the ground up to over
-$40M revenue. 
+      <p>My journey has taken me from academic research both in Europe and the US to small and dynamic startups in Silicon Valley, from coordinating European research projects to scaling a company from the ground up to over $40M revenue.<br>
 
-The common theme has always been to educate
-and grow people in an environment where
-innovation is key.
+The common theme has always been to educate and grow people in an environment where innovation is key.<br>
 
-What drives me is the opportunity to help others
-navigate challenges, whether that’s through
-strategic advice, hands-on problem solving, or
-simply making difficult concepts accessible. I
-believe the best solutions come from a mix of
-rigorous thinking, empathy, and a willingness to
-experiment.
-
-If you think you have a problem that might pique
-my curiosity, let’s talk.
-      </p>
+What drives me is the opportunity to help others navigate challenges, whether that’s through strategic advice, hands-on problem solving, or simply making difficult concepts accessible. I believe the best solutions come from a mix of rigorous thinking, empathy, and a willingness to experiment.
+<br>If you think you have a problem that might pique my curiosity, let’s talk.</p>
     </div>
 
     <div class="about-side">
       <div class="about-side-item">
         <h3>Speaker</h3>
-        <p>Lorem Ipsum is simply dummy text</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <p>I’m happy to share my perspectives on data science and AI in talks and panel discussions.</p>
       </div>
 
       <div class="about-side-item">
         <h3>Publicist</h3>
-        <p>Lorem Ipsum is simply dummy text</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <p>In my publications, I explore current developments in data science and AI, providing practical, hands-on insights.</p>
       </div>
 
       <div class="about-side-item">
         <h3>AI &amp; Data Science Pioneer</h3>
-        <p>Lorem Ipsum is simply dummy text</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <p>Advancing data science and AI is a constant focus of my work.</p>
       </div>
     </div>
   </div>
@@ -89,26 +69,18 @@ my curiosity, let’s talk.
       <div class="bio-row">
         <div class="bio-label">Bio</div>
         <div class="bio-text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem.
+          Computer scientist, data scientist, and entrepreneur specializing in machine learning, data mining, and knowledge discovery. Expert in visual workflows that make complex data analysis intuitive and accessible.
+Studied computer science at the University of Karlsruhe, complemented by international research experience at Carnegie Mellon University and the University of California, Berkeley.
+From 2003 to 2017, served as Professor of Bioinformatics and Information Mining at the University of Konstanz. Recipient of the KS Fu Award from the North American Fuzzy Information Processing Society and awarded an honorary professorship at Óbuda University in Budapest.
+Author of over 250 scientific publications and technical books.
+Until 2025, CEO of the co-founded data analytics platform KNIME, which has grown into a global community with several hundred thousand users.
         </div>
       </div>
 
       <div class="bio-row">
         <div class="bio-label">My Approach</div>
         <div class="bio-text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem.
+          At heart, I’m curious about data science, machine learning, and AI—not just as technologies, but as tools to solve real-world problems and create meaningful impact. I’ve spent years translating complex ideas into clear, actionable insights, and I thrive at the intersection of innovation and execution.
         </div>
       </div>
     </div>
@@ -119,10 +91,18 @@ my curiosity, let’s talk.
   <div class="container">
     <div class="books-head">
       <h2 class="section-title section-title-light">Books and Textbooks</h2>
-      <div class="books-tip">
+
+      <a class="books-tip"
+         href="https://link.springer.com/content/pdf/10.1007/978-3-642-31830-6.pdf"
+         target="_blank"
+         rel="noopener noreferrer">
         <span class="books-tip-label">Tip</span>
-        <span>You have full access to this open access book: <strong>Bisociative Knowledge Discovery</strong></span>
-      </div>
+        <span>
+          You have full access to this
+          <span class="books-tip-highlight">open access</span>
+          book: Bisociative Knowledge Discovery
+        </span>
+      </a>
     </div>
 
     <div class="books-grid books-grid-home">
@@ -139,7 +119,7 @@ my curiosity, let’s talk.
           <p class="book-card-excerpt">{{ book.excerpt }}</p>
 
           {% if book.external_url %}
-          <a class="button-outline {% if book.button_style == 'accent' %}button-outline-accent{% endif %}"
+          <a class="button-outline {% if book.button_style == 'accent' %}button-outline-accent{% else %}button-outline-light{% endif %}"
              href="{{ book.external_url }}"
              target="_blank"
              rel="noopener noreferrer">
@@ -156,11 +136,9 @@ my curiosity, let’s talk.
 <section class="video-teaser section">
   <div class="container video-teaser-grid">
     <div class="video-teaser-copy">
-      <h2 class="video-teaser-title">Step into the world of data, insights, and intelligent systems</h2>
+      <h2 class="video-teaser-title">Step into the world<br> of data, insights,<br> and intelligent systems</h2>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        Discover videos from events on Data Analytics and Data Science—with inspiring keynotes, interactive workshops, and practical examples.
       </p>
       <a class="button button-accent" href="{{ '/videos/' | relative_url }}">SEE VIDEOS</a>
     </div>
@@ -193,27 +171,29 @@ my curiosity, let’s talk.
     <div class="musings-band-grid">
       {% assign latest_musings = site.musings | sort: 'date' | reverse | slice: 0, 3 %}
       {% for post in latest_musings %}
-      <article class="musing-tile {% if forloop.first %}musing-tile-accent{% elsif forloop.index == 2 %}musing-tile-mid{% else %}musing-tile-light{% endif %}">
-        <div class="musing-tile-top">
-          <div class="musing-tile-number">{{ forloop.index | prepend: '0' }}</div>
-          <div class="musing-tile-arrow">→</div>
-        </div>
+      <article class="musing-home-card">
+        <div class="musing-tile {% if forloop.first %}musing-tile-accent{% elsif forloop.index == 2 %}musing-tile-mid{% else %}musing-tile-light{% endif %}">
+          <div class="musing-tile-top">
+            <div class="musing-tile-number">{{ forloop.index | prepend: '0' }}</div>
+            <div class="musing-tile-arrow">→</div>
+          </div>
 
-        <div class="musing-tile-body">
-          <h3>{{ post.title }}</h3>
-          <p class="musing-tile-date">{{ post.date | date: "%B %d, %Y" }}</p>
-        </div>
-
-        <div class="musing-tile-actions">
-          <a class="button-outline {% if forloop.first %}button-outline-dark{% else %}button-outline-light{% endif %}" href="{{ post.url | relative_url }}">Read more</a>
+          <div class="musing-tile-body">
+            <h3>{{ post.title }}</h3>
+            <p class="musing-tile-date">{{ post.date | date: "%B %d, %Y" }}</p>
+          </div>
         </div>
 
         <p class="musing-tile-excerpt">{{ post.excerpt }}</p>
+
+        <div class="musing-tile-actions">
+          <a class="button-outline {% if forloop.first %}button-outline-light{% else %}button-outline-light{% endif %}" href="{{ post.url | relative_url }}">Read more</a>
+        </div>
       </article>
       {% endfor %}
     </div>
   </div>
-</section>
+</section>  
 
 <section class="publications-band section">
   <div class="container">

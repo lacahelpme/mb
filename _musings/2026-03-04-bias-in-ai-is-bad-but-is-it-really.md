@@ -1,7 +1,7 @@
 ---
 title: "Bias in AI is bad – but is it really?"
 date: 2026-03-04
-excerpt: "There is a lot of talk about bias in AI and how it results in bad answers."
+excerpt: "There is a lot of talk about bias in AI and how it results in bad and sometimes even harmful answers. But if you peel back a layer..."
 author_line: "By Michael R. Berthold"
 lang: en
 seo_title: "Bias in AI is bad – but is it really?"
