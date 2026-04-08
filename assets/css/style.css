@@ -761,25 +761,38 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px 34px;
+  align-items: stretch;
 }
 
 .publication-home-card {
   display: grid;
   grid-template-columns: 150px 1fr;
-  gap: 14px;
-  align-items: start;
+  gap: 20px;
+  align-items: stretch;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.publication-home-thumb {
+  height: 100%;
 }
 
 .publication-home-thumb img {
   width: 100%;
-  aspect-ratio: 1 / 1.02;
+  height: 100%;
+  min-height: 230px;
+  aspect-ratio: 1 / 1.04;
   object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 
 .publication-home-body {
   display: grid;
-  gap: 0;
+  grid-template-rows: auto auto auto 1fr auto;
   align-content: start;
+  min-height: 230px;
 }
 
 .publication-home-source {
@@ -804,9 +817,30 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 
 .publication-home-excerpt {
   color: #efefef;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   font-size: 0.93rem;
   line-height: 1.48;
+}
+
+.publication-home-readmore {
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+  margin-top: auto;
+  justify-self: start;
+  text-align: left;
+}
+
+.publication-home-card:hover .publication-home-title,
+.publication-home-card:focus-visible .publication-home-title {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.publication-home-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 /* Listing page hero */
