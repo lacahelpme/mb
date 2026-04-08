@@ -171,27 +171,29 @@ Until 2025, CEO of the co-founded data analytics platform KNIME, which has grown
     <div class="musings-band-grid">
       {% assign latest_musings = site.musings | sort: 'date' | reverse | slice: 0, 3 %}
       {% for post in latest_musings %}
-      <article class="musing-tile {% if forloop.first %}musing-tile-accent{% elsif forloop.index == 2 %}musing-tile-mid{% else %}musing-tile-light{% endif %}">
-        <div class="musing-tile-top">
-          <div class="musing-tile-number">{{ forloop.index | prepend: '0' }}</div>
-          <div class="musing-tile-arrow">→</div>
-        </div>
+      <article class="musing-home-card">
+        <div class="musing-tile {% if forloop.first %}musing-tile-accent{% elsif forloop.index == 2 %}musing-tile-mid{% else %}musing-tile-light{% endif %}">
+          <div class="musing-tile-top">
+            <div class="musing-tile-number">{{ forloop.index | prepend: '0' }}</div>
+            <div class="musing-tile-arrow">→</div>
+          </div>
 
-        <div class="musing-tile-body">
-          <h3>{{ post.title }}</h3>
-          <p class="musing-tile-date">{{ post.date | date: "%B %d, %Y" }}</p>
-        </div>
-
-        <div class="musing-tile-actions">
-          <a class="button-outline {% if forloop.first %}button-outline-dark{% else %}button-outline-light{% endif %}" href="{{ post.url | relative_url }}">Read more</a>
+          <div class="musing-tile-body">
+            <h3>{{ post.title }}</h3>
+            <p class="musing-tile-date">{{ post.date | date: "%B %d, %Y" }}</p>
+          </div>
         </div>
 
         <p class="musing-tile-excerpt">{{ post.excerpt }}</p>
+
+        <div class="musing-tile-actions">
+          <a class="button-outline {% if forloop.first %}button-outline-light{% else %}button-outline-light{% endif %}" href="{{ post.url | relative_url }}">Read more</a>
+        </div>
       </article>
       {% endfor %}
     </div>
   </div>
-</section>
+</section>  
 
 <section class="publications-band section">
   <div class="container">
