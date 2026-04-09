@@ -1192,24 +1192,28 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 /* Footer */
 
 .site-footer {
+  position: relative;
   background: var(--black);
   color: var(--white);
   overflow: hidden;
 }
 
+/* Layout */
+
 .footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.08fr;
-  gap: 12px;
-  align-items: stretch;
   min-height: 560px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
+/* Text block */
+
 .footer-copy {
+  position: relative;
+  z-index: 2;
   padding: 56px 0 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 720px;
 }
 
 .footer-copy h2 {
@@ -1221,6 +1225,8 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   font-weight: 800;
   color: var(--white);
 }
+
+/* Contact list */
 
 .footer-contact-list {
   display: grid;
@@ -1240,36 +1246,39 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   line-height: 1.4;
 }
 
+.footer-contact-item img {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  object-fit: contain;
+  display: block;
+}
+
 .footer-contact-item a,
 .footer-contact-item span {
   color: var(--white);
 }
 
-.footer-contact-item img {
-  width: 24px;
-  height: 24px;
-  flex: 0 0 24px;
-  object-fit: contain;
-  display: block;
+/* PNG FIGURA */
+
+.footer-figure {
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+
+  width: min(46vw, 720px);
+  height: min(92%, 620px);
+
+  background-image: url('{{ "/assets/img/general/Michael-Berthold-Contact1.png" | relative_url }}');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+
+  z-index: 1;
+  pointer-events: none;
 }
 
-.footer-image {
-  position: relative;
-  height: 100%;
-  min-height: 560px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.footer-image img {
-  width: 100%;
-  height: 100%;
-  max-height: none;
-  object-fit: contain;
-  object-position: right bottom;
-  display: block;
-}
+/* Accent bar */
 
 .footer-accent-bar {
   height: 14px;
