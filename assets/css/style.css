@@ -1269,7 +1269,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   width: min(46vw, 720px);
   height: min(92%, 620px);
 
-  background-image: url('{{ "/assets/img/general/Michael-Berthold-Contact2.png" | relative_url }}');
+  background-image: url('/mb/assets/img/general/Michael-Berthold-Contact1.png');
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
