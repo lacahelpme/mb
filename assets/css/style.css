@@ -1587,10 +1587,6 @@ a:focus-visible {
     font-size: 0.76rem;
   }
 
-  .hero-visual {
-    min-height: 520px;
-    justify-content: center;
-  }
 
   .hero-arrow {
     display: none;
@@ -1711,9 +1707,7 @@ a:focus-visible {
     display: none;
   }
 
-  .hero-visual {
-    min-height: 420px;
-  }
+  
 
   .hero-panel {
     min-height: auto;
