@@ -287,6 +287,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   min-height: 760px;
   gap: 0;
   position: relative;
+  z-index: 2;
 }
 
 .hero-shell::after {
@@ -306,19 +307,23 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 
 .hero-figure {
   position: absolute;
-  inset: 0;
-  overflow: hidden;
+  left: 0;
+  right: 500px;
+  top: 96px;   /* safe area a nav alatt */
+  bottom: 0;   /* ráül a hero aljára */
   z-index: 1;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .hero-figure img {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 100%;
+  height: auto;
   width: auto;
   max-width: none;
+  max-height: 100%;
   display: block;
 }
 
@@ -418,17 +423,27 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
     grid-template-columns: 1fr 1fr;
   }
 
-  .hero-shell {
-    display: grid;
+    .hero-shell {
     grid-template-columns: 1fr 420px;
     align-items: stretch;
-    min-height: 584px;
+    min-height: 620px;
     gap: 0;
     position: relative;
   }
 
   .hero-shell::after {
     display: none;
+  }
+
+  .hero-figure {
+    right: 420px;
+    top: 92px;
+    bottom: 0;
+  }
+
+  .hero-figure img {
+    left: -40px;
+    max-height: 100%;
   }
 
   .hero-panel {
@@ -450,15 +465,9 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
     font-size: 0.76rem;
   }
 
-  .hero-figure img {
-    height: 100%;
-    width: auto;
-  }
-
   .hero-arrow {
     display: none;
   }
-
   .article-title {
     max-width: 100%;
   }
@@ -558,7 +567,8 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
     grid-template-columns: 1fr;
   }
 
-  .hero-shell {
+    .hero-shell {
+    grid-template-columns: 1fr;
     min-height: auto;
   }
 
@@ -568,23 +578,30 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 
   .hero-figure {
     position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
     min-height: 420px;
+    height: 420px;
+    overflow: hidden;
   }
 
   .hero-figure img {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
     bottom: 0;
+    transform: translateX(-58%);
     height: 100%;
     width: auto;
+    max-height: none;
   }
 
   .hero-panel {
     min-height: auto;
     height: auto;
     padding: 24px 18px 28px;
-    margin: 96px 0 0 0;
+    margin: 0;
     max-width: none;
   }
 
@@ -595,7 +612,6 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   .hero-actions .hero-arrow {
     display: none !important;
   }
-}
 
 
 /* About */
