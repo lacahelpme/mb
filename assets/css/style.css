@@ -304,20 +304,22 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   z-index: 2;
 }
 
-.hero-visual {
+.hero-figure {
   position: absolute;
   inset: 0;
   overflow: hidden;
   z-index: 1;
+  pointer-events: none;
 }
 
-.hero-visual img {
-  width: 100%;
+.hero-figure img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   height: 100%;
+  width: auto;
   max-width: none;
-  max-height: none;
-  object-fit: cover;
-  object-position: center center;
+  display: block;
 }
 
 .hero-panel {
@@ -390,6 +392,211 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   opacity: 0.85;
   margin-left: auto;
 }
+
+@media (max-width: 1180px) {
+  .hero-shell,
+  .about-light-grid,
+  .bio-grid,
+  .video-teaser-grid,
+  .footer-grid,
+  .video-card,
+  .publication-list-card,
+  .musing-list-card {
+    grid-template-columns: 1fr;
+  }
+
+  .books-head,
+  .musings-band-head,
+  .publications-band-head {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .books-grid-home,
+  .musings-band-grid,
+  .publications-home-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-shell {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    align-items: stretch;
+    min-height: 584px;
+    gap: 0;
+    position: relative;
+  }
+
+  .hero-shell::after {
+    display: none;
+  }
+
+  .hero-panel {
+    margin: 0 24px 0 0;
+    max-width: 420px;
+    min-height: 100%;
+    height: auto;
+    padding: 112px 24px 48px 32px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 4.6vw, 3.9rem);
+    max-width: 6.6ch;
+  }
+
+  .hero-actions .button {
+    min-height: 40px;
+    padding: 0 24px;
+    font-size: 0.76rem;
+  }
+
+  .hero-figure img {
+    height: 100%;
+    width: auto;
+  }
+
+  .hero-arrow {
+    display: none;
+  }
+
+  .article-title {
+    max-width: 100%;
+  }
+
+  .footer-grid {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(calc(100% - 28px), var(--container));
+  }
+
+  .section {
+    padding: clamp(2.5rem, 8vw, 4rem) 0;
+  }
+
+  .header-inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 0;
+    min-height: auto;
+    position: relative;
+  }
+
+  .logo-image img {
+    width: 76px;
+  }
+
+  .nav-toggle-label {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    cursor: pointer;
+    z-index: 60;
+    position: relative;
+  }
+
+  .primary-nav {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: rgba(43, 43, 43, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 18px 18px 20px;
+    display: none;
+    z-index: 50;
+  }
+
+  .primary-nav ul {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .primary-nav a {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    padding: 4px 0;
+  }
+
+  .nav-toggle:checked ~ .primary-nav {
+    display: block;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .hero-shell,
+  .books-grid-home,
+  .musings-band-grid,
+  .publications-home-grid,
+  .publication-home-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-shell {
+    min-height: auto;
+  }
+
+  .hero-shell::after {
+    display: none;
+  }
+
+  .hero-figure {
+    position: relative;
+    min-height: 420px;
+  }
+
+  .hero-figure img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 100%;
+    width: auto;
+  }
+
+  .hero-panel {
+    min-height: auto;
+    height: auto;
+    padding: 24px 18px 28px;
+    margin: 96px 0 0 0;
+    max-width: none;
+  }
+
+  .hero-title {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+  }
+
+  .hero-actions .hero-arrow {
+    display: none !important;
+  }
+}
+
 
 /* About */
 
