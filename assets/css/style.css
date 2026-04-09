@@ -1265,17 +1265,18 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   position: absolute;
   right: 0;
   bottom: 14px;
-
   width: min(46vw, 720px);
   height: min(92%, 620px);
-
-  background-image: url('/mb/assets/img/general/Michael-Berthold-Contact1.png');
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: contain;
-
   z-index: 1;
   pointer-events: none;
+}
+
+.footer-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right bottom;
+  display: block;
 }
 
 /* Accent bar */
