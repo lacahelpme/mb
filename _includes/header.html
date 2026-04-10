@@ -1,4 +1,4 @@
-<header class="site-header site-header-dark">
+<header class="site-header {% if page.url == '/' %}site-header-home{% else %}site-header-subpage{% endif %}">
   <div class="container header-inner">
     <a class="logo logo-image" href="{{ '/' | relative_url }}">
       <img src="{{ '/assets/img/general/Michael-Berthold-Logo.png' | relative_url }}" alt="MB logo">
