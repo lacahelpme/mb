@@ -29,7 +29,9 @@
   --shadow-none: 0 0 0 rgba(0, 0, 0, 0);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -553,6 +555,12 @@ h4:last-child {
   gap: 30px;
 }
 
+.books-grid-all {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
 .book-card-home {
   display: grid;
   gap: 14px;
@@ -702,6 +710,11 @@ h4:last-child {
   color: var(--black);
 }
 
+.musing-tile-dark {
+  background: var(--black);
+  color: var(--white);
+}
+
 .musing-tile-top {
   display: flex;
   justify-content: space-between;
@@ -725,16 +738,16 @@ h4:last-child {
   text-transform: uppercase;
 }
 
-.musing-tile-date {
-  font-size: 0.92rem;
-}
-
 .musing-tile-excerpt {
   margin: 14px 0 14px;
   font-size: 0.93rem;
   line-height: 1.5;
   opacity: 0.95;
   color: rgba(255, 255, 255, 0.84);
+}
+
+.musing-tile-date {
+  font-size: 0.92rem;
 }
 
 .musing-home-card .musing-tile-actions {
@@ -849,7 +862,7 @@ h4:last-child {
   outline-offset: 4px;
 }
 
-/* Listing page hero */
+/* Default page hero */
 
 .page-hero {
   padding: clamp(2.9rem, 6vw, 4.7rem) 0 clamp(2.2rem, 5vw, 3.6rem);
@@ -882,6 +895,29 @@ h4:last-child {
   font-size: 1rem;
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.82);
+}
+
+/* Subpage intro band */
+
+.subpage-intro {
+  background: var(--light);
+  color: var(--black);
+  padding: 138px 0 44px;
+}
+
+.subpage-intro-title {
+  font-size: clamp(2.7rem, 5vw, 4.1rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.subpage-intro-text {
+  max-width: 980px;
+  color: #5a5a5a;
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
 /* Videos listing */
@@ -1017,7 +1053,7 @@ h4:last-child {
   line-height: 1.52;
 }
 
-/* Musings listing */
+/* Musings legacy listing */
 
 .musings-listing {
   background: var(--light);
@@ -1091,6 +1127,160 @@ h4:last-child {
   margin-bottom: 1rem;
   font-size: 0.96rem;
   line-height: 1.56;
+}
+
+/* Musings subpage cards */
+
+.musings-listing-cards {
+  padding-top: 0;
+}
+
+.musings-subpage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.musing-home-card-subpage {
+  min-height: 100%;
+}
+
+.musing-tile-subpage {
+  min-height: 370px;
+  grid-template-rows: auto 1fr auto;
+  padding: 22px 18px 18px;
+  border-radius: 22px;
+}
+
+.musing-tile-subpage .musing-tile-top {
+  margin-bottom: 0.5rem;
+}
+
+.musing-tile-subpage .musing-tile-arrow {
+  font-size: 2.4rem;
+}
+
+.musing-tile-subpage .musing-tile-body h2 {
+  font-size: clamp(1.05rem, 1.35vw, 1.28rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.65rem;
+}
+
+.musing-tile-subpage .musing-tile-date {
+  font-size: 0.92rem;
+  opacity: 0.95;
+}
+
+.musing-tile-subpage .musing-tile-actions {
+  margin-top: 1.25rem;
+}
+
+.musing-tile-subpage .button-outline {
+  justify-self: start;
+}
+
+/* Publications subpage */
+
+.publications-books-section {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.publications-commentary-section .publications-band-head {
+  align-items: center;
+}
+
+.subpage-text-lists {
+  background: var(--light);
+}
+
+.subpage-text-block + .subpage-text-block {
+  margin-top: 2.75rem;
+}
+
+.subpage-text-title {
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.subpage-text-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.subpage-text-list p {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #2f2f2f;
+  margin: 0;
+}
+
+/* Contact page */
+
+.contact-page-section {
+  background: var(--light);
+  padding-top: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.contact-block-title {
+  font-size: clamp(1.7rem, 2.8vw, 2.2rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+  margin-bottom: 1.6rem;
+}
+
+.contact-info-list,
+.contact-follow-list {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.contact-info-item p,
+.contact-follow-item p,
+.contact-downloads p {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #4e4e4e;
+  margin: 0;
+}
+
+.contact-follow-item h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+}
+
+.contact-follow-item a,
+.contact-info-item a {
+  color: inherit;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.contact-follow-item a:hover,
+.contact-info-item a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.contact-downloads {
+  margin-top: 4rem;
+  max-width: 620px;
 }
 
 /* Article page */
@@ -1281,7 +1471,12 @@ h4:last-child {
 .publication-list-excerpt,
 .video-card-excerpt,
 .musing-list-excerpt,
-.article-body p {
+.article-body p,
+.subpage-intro-text,
+.subpage-text-list p,
+.contact-info-item p,
+.contact-follow-item p,
+.contact-downloads p {
   text-wrap: pretty;
 }
 
@@ -1314,8 +1509,8 @@ a:focus-visible {
   }
 
   .books-grid-home,
-  .musings-band-grid,
-  .publications-home-grid {
+  .publications-home-grid,
+  .books-grid-all {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1371,6 +1566,14 @@ a:focus-visible {
     grid-template-columns: 1fr 1fr;
   }
 
+  .musings-subpage-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .contact-grid {
+    gap: 40px;
+  }
+
   .footer-grid {
     min-height: auto;
   }
@@ -1381,6 +1584,17 @@ a:focus-visible {
 
   .footer-figure img {
     max-height: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .musings-subpage-grid,
+  .books-grid-all {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1469,7 +1683,9 @@ a:focus-visible {
   .hero-shell,
   .books-grid-home,
   .musings-band-grid,
-  .publications-home-grid {
+  .publications-home-grid,
+  .books-grid-all,
+  .musings-subpage-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1542,6 +1758,10 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .subpage-intro {
+    padding: 108px 0 32px;
+  }
+
   .video-teaser-media video,
   .video-teaser-media iframe,
   .video-teaser-media img,
@@ -1576,6 +1796,10 @@ a:focus-visible {
 
   .musing-tile-body h3 {
     max-width: none;
+  }
+
+  .musing-tile-subpage {
+    min-height: 300px;
   }
 
   .publications-band-head {
@@ -1646,6 +1870,10 @@ a:focus-visible {
   .page-title,
   .article-title {
     word-break: break-word;
+  }
+
+  .contact-downloads {
+    margin-top: 2.5rem;
   }
 
   .footer-grid {
