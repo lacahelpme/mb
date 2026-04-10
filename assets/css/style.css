@@ -1400,6 +1400,12 @@ h4:last-child {
   font-weight: 700;
 }
 
+.article-subpage-author {
+  color: #606060;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
 .article-body {
   padding-top: clamp(2.8rem, 6vw, 4.7rem);
   padding-bottom: clamp(4rem, 8vw, 6rem);
