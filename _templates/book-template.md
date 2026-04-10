@@ -1,7 +1,9 @@
----
 # DUPLICATE THIS FILE INTO /_books/ AND RENAME IT TO slug.md
 # Example: guide-to-intelligent-data-science.md
 
+# COPY EVERYTHING BELOW THIS LINE
+
+---
 title: "Example Book Title"
 author: "Author Name"
 year: "2026"
@@ -19,8 +21,9 @@ seo_description: "SEO description for the book card."
 
 <!--
 INSTRUCTIONS:
-1. Copy this file into /_books/
-2. Rename it
-3. Fill the metadata above
-4. There is no article body for books
+
+1. Copy file
+2. Rename file
+3. Fill metadata
+4. No article body
 -->
