@@ -7,14 +7,18 @@ lang: en
 permalink: /publications/
 ---
 
+<!-- INTRO / HERO -->
+
 <section class="subpage-intro">
   <div class="container">
     <h1 class="subpage-intro-title">Publications</h1>
     <p class="subpage-intro-text">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
     </p>
   </div>
 </section>
+
+<!-- BOOKS -->
 
 <section class="books-band section publications-books-section">
   <div class="container">
@@ -63,12 +67,19 @@ permalink: /publications/
   </div>
 </section>
 
+<!-- COMMENTARY / ARTICLES -->
+
 <section class="publications-band section publications-commentary-section">
   <div class="container">
     <div class="publications-band-head">
-      <h2 class="section-title section-title-light">Select Thought Leadership / Industry Commentary</h2>
+      <h2 class="section-title section-title-light">
+        Select Thought Leadership / Industry Commentary
+      </h2>
+
       <div class="publications-band-actions">
-        <a class="button button-dark" href="{{ '/contact/' | relative_url }}">PRESS CONTACT</a>
+        <a class="button button-dark" href="{{ '/contact/' | relative_url }}">
+          PRESS CONTACT
+        </a>
       </div>
     </div>
 
@@ -84,6 +95,7 @@ permalink: /publications/
         </div>
 
         <div class="publication-home-body">
+
           {% if post.source_name %}
             <p class="publication-home-source">{{ post.source_name }}</p>
           {% endif %}
@@ -91,7 +103,9 @@ permalink: /publications/
           <h3 class="publication-home-title">{{ post.title }}</h3>
 
           {% if post.date %}
-          <p class="publication-home-date">{{ post.date | date: "%-d %B %Y" }}</p>
+          <p class="publication-home-date">
+            {{ post.date | date: "%-d %B %Y" }}
+          </p>
           {% endif %}
 
           {% if post.excerpt %}
@@ -106,24 +120,48 @@ permalink: /publications/
   </div>
 </section>
 
+<!-- TEXT LISTS -->
+
 <section class="subpage-text-lists section">
   <div class="container">
+
+    <!-- Edited Volumes -->
     <div class="subpage-text-block">
       <h2 class="subpage-text-title">Edited Volumes</h2>
-      <div class="subpage-text-list">
-        {% for item in site.data.site_settings.publications.edited_volumes %}
-        <p>{{ item }}</p>
+
+      <ul class="subpage-text-list">
+        {% for item in site.data.edited_volumes %}
+        <li>
+          {% if item.url and item.url != "" %}
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+              {{ item.text }}
+            </a>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </li>
         {% endfor %}
-      </div>
+      </ul>
     </div>
 
+    <!-- Peer Reviewed -->
     <div class="subpage-text-block">
       <h2 class="subpage-text-title">Peer Reviewed Publications</h2>
-      <div class="subpage-text-list">
-        {% for item in site.data.site_settings.publications.peer_reviewed_publications %}
-        <p>{{ item }}</p>
+
+      <ul class="subpage-text-list">
+        {% for item in site.data.peer_reviewed_publications %}
+        <li>
+          {% if item.url and item.url != "" %}
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+              {{ item.text }}
+            </a>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </li>
         {% endfor %}
-      </div>
+      </ul>
     </div>
+
   </div>
 </section>
