@@ -1,6 +1,8 @@
----
 # DUPLICATE THIS FILE INTO /_videos/ AND RENAME IT TO YYYY-MM-DD-slug.md
 
+# COPY EVERYTHING BELOW THIS LINE
+
+---
 title: "Example Video Title"
 event_name: "Example Conference 2026"
 date: 2026-01-01
@@ -14,11 +16,20 @@ seo_description: "SEO description for the video."
 
 <!--
 INSTRUCTIONS:
-1. Copy this file into /_videos/
-2. Rename it using the date and slug
+
+1. Copy file
+2. Rename file
 3. Fill metadata
-4. Use video_file for now; video_embed can be used later if needed
-5. Replace the lorem ipsum below with optional body copy
+4. Optional body content
 -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+This is optional description text for the video.
+
+## Context
+
+You can add details about the talk, event, or topic here.
+
+- Key point one
+- Key point two
+
+[Related link](https://example.com)
