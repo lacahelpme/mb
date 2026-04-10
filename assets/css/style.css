@@ -211,11 +211,15 @@ h4:last-child {
   left: 0;
   width: 100%;
   z-index: 30;
+  color: var(--white);
 }
 
-.site-header-dark {
+.site-header-home {
+  background: #2F2F2F;
+}
+
+.site-header-subpage {
   background: var(--black);
-  color: var(--white);
 }
 
 .header-inner {
