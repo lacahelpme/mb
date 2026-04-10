@@ -1244,8 +1244,8 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 
 .footer-figure {
   position: absolute;
-  right: 0;
   bottom: 14px;
+  right: calc((100vw - var(--container)) / 2);
   width: min(34vw, 460px);
   height: min(82%, 420px);
   z-index: 1;
