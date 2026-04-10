@@ -9,5 +9,3 @@ lang: en
 seo_title: "KNIME SPRING SUMMIT 2025"
 seo_description: "Video page for Good Data Makes Good Agents from KNIME Summit 2025."
 ---
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor metus at quam porta, quis luctus tellus mattis.
