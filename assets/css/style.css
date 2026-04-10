@@ -284,7 +284,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 500px;
   align-items: stretch;
-  min-height: 760px;
+  min-height: min(680px, 82vh);
   gap: 0;
   position: relative;
   z-index: 2;
@@ -293,7 +293,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 .hero-shell::after {
   content: "";
   position: absolute;
-  top: 86px;
+  top: 108px;
   right: 0;
   bottom: 0;
   width: 500px;
@@ -309,8 +309,8 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: clamp(420px, 42vw, 620px);
-  height: calc(100% - 24px);
+  width: clamp(340px, 34vw, 500px);
+  height: calc(100% - 36px);
   z-index: 1;
   overflow: hidden;
   pointer-events: none;
@@ -328,7 +328,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 .hero-panel {
   height: auto;
   min-height: 100%;
-  padding: 142px 52px 72px 72px;
+  padding: 134px 52px 48px 72px;
   display: flex;
   flex-direction: column;
   width: 100%;
