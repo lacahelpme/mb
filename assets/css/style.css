@@ -66,7 +66,9 @@ p,
 h1,
 h2,
 h3,
-h4 {
+h4,
+ul,
+ol {
   margin-top: 0;
 }
 
@@ -204,20 +206,14 @@ h4:last-child {
 /* Header */
 
 .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 30;
 }
 
-.site-header-home {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: transparent;
-  color: var(--white);
-}
-
-.site-header-subpage {
-  position: relative;
+.site-header-dark {
   background: var(--black);
   color: var(--white);
 }
@@ -264,15 +260,6 @@ h4:last-child {
 .primary-nav a:hover,
 .primary-nav a:focus-visible {
   color: var(--accent);
-}
-
-.primary-nav ul li:last-child {
-  margin-left: auto;
-}
-
-.primary-nav .button-header {
-  min-width: 170px;
-  white-space: nowrap;
 }
 
 .header-cta {
@@ -564,12 +551,7 @@ h4:last-child {
   font-weight: 700;
 }
 
-.books-grid-home {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px;
-}
-
+.books-grid-home,
 .books-grid-all {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -794,6 +776,12 @@ h4:last-child {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.publications-band-actions .button {
+  white-space: nowrap;
+  min-width: 170px;
 }
 
 .publications-home-grid {
@@ -917,7 +905,7 @@ h4:last-child {
 .subpage-intro {
   background: var(--light);
   color: var(--black);
-  padding: 56px 0 44px;
+  padding: 150px 0 44px;
 }
 
 .subpage-intro-title {
@@ -935,8 +923,7 @@ h4:last-child {
   line-height: 1.55;
 }
 
-/* Video listings */
-
+/* Videos listing */
 
 .videos-listing {
   background: var(--light);
@@ -1214,10 +1201,6 @@ h4:last-child {
   align-items: center;
 }
 
-.publications-band-actions .button {
-  white-space: nowrap;
-}
-
 .subpage-text-lists {
   background: var(--light);
 }
@@ -1281,15 +1264,51 @@ h4:last-child {
   margin-bottom: 1.6rem;
 }
 
-.contact-info-list,
-.contact-follow-list {
+.contact-icon-list,
+.contact-follow-list,
+.contact-info-list {
   display: grid;
-  gap: 1.35rem;
+  gap: 18px;
+}
+
+.contact-icon-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.contact-icon-item img {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  object-fit: contain;
+  display: block;
+}
+
+.contact-icon-item span,
+.contact-icon-item a {
+  color: #4e4e4e;
+  text-decoration: none;
+}
+
+.contact-icon-item a:hover,
+.contact-icon-item a:focus-visible,
+.contact-follow-row a:hover,
+.contact-follow-row a:focus-visible,
+.contact-follow-item a:hover,
+.contact-follow-item a:focus-visible,
+.contact-info-item a:hover,
+.contact-info-item a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
 }
 
 .contact-info-item p,
 .contact-follow-item p,
-.contact-downloads p {
+.contact-downloads p,
+.contact-follow-row p {
   font-size: 1rem;
   line-height: 1.55;
   color: #4e4e4e;
@@ -1304,7 +1323,8 @@ h4:last-child {
   color: var(--black);
 }
 
-.contact-follow-item h3 {
+.contact-follow-item h3,
+.contact-follow-row h3 {
   font-size: 1rem;
   line-height: 1.2;
   font-weight: 700;
@@ -1312,16 +1332,11 @@ h4:last-child {
 }
 
 .contact-follow-item a,
-.contact-info-item a {
+.contact-info-item a,
+.contact-follow-row a {
   color: inherit;
   text-decoration: none;
   word-break: break-word;
-}
-
-.contact-follow-item a:hover,
-.contact-info-item a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.12em;
 }
 
 .contact-downloads {
@@ -1522,6 +1537,7 @@ h4:last-child {
 .subpage-text-list li,
 .contact-info-item p,
 .contact-follow-item p,
+.contact-follow-row p,
 .contact-downloads p {
   text-wrap: pretty;
 }
@@ -1541,10 +1557,8 @@ a:focus-visible {
   .bio-grid,
   .video-teaser-grid,
   .footer-grid,
-  .video-card,
   .publication-list-card,
-  .musing-list-card,
-  .videos-grid {
+  .musing-list-card {
     grid-template-columns: 1fr;
   }
 
@@ -1615,6 +1629,10 @@ a:focus-visible {
 
   .musings-subpage-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-grid {
@@ -1806,7 +1824,7 @@ a:focus-visible {
   }
 
   .subpage-intro {
-    padding: 40px 0 32px;
+    padding: 108px 0 32px;
   }
 
   .video-teaser-media video,
@@ -1910,7 +1928,7 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .video-card {
+  .videos-grid {
     grid-template-columns: 1fr;
   }
 
