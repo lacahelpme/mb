@@ -5,27 +5,68 @@ seo_title: "Contact | Michael R. Berthold"
 seo_description: "Contact details, press contact, and professional links for Michael R. Berthold."
 ---
 
-<section class="page-hero">
-  <div class="container narrow">
-    <h1>Contact</h1>
-    <p class="lead">Use this page for press contact, professional links, and direct outreach details.</p>
+<section class="subpage-intro">
+  <div class="container">
+    <h1 class="subpage-intro-title">Contact</h1>
+    <p class="subpage-intro-text">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
   </div>
 </section>
 
-<section class="section">
-  <div class="container narrow contact-stack">
-    <div>
-      {% for line in site.data.site_settings.contact.address_lines %}
-      <p>{{ line }}</p>
-      {% endfor %}
-      <p><a href="tel:{{ site.data.site_settings.contact.phone_link }}">{{ site.data.site_settings.contact.phone_display }}</a></p>
-      <p><a href="mailto:{{ site.data.site_settings.contact.email }}">{{ site.data.site_settings.contact.email }}</a></p>
+<section class="section contact-page-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-block">
+        <h2 class="contact-block-title">Press Contact</h2>
+
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <p>
+              {% for line in site.data.site_settings.contact.address_lines %}
+                {{ line }}{% unless forloop.last %}<br>{% endunless %}
+              {% endfor %}
+            </p>
+          </div>
+
+          <div class="contact-info-item">
+            <p><a href="tel:{{ site.data.site_settings.contact.phone_link }}">{{ site.data.site_settings.contact.phone_display }}</a></p>
+          </div>
+
+          <div class="contact-info-item">
+            <p><a href="mailto:{{ site.data.site_settings.contact.email }}">{{ site.data.site_settings.contact.email }}</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <h2 class="contact-block-title">Where to follow</h2>
+
+        <div class="contact-follow-list">
+          <div class="contact-follow-item">
+            <h3>LinkedIn</h3>
+            <p>
+              <a href="{{ site.data.site_settings.contact.linkedin_url }}" target="_blank" rel="noopener noreferrer">
+                {{ site.data.site_settings.contact.linkedin_url }}
+              </a>
+            </p>
+          </div>
+
+          <div class="contact-follow-item">
+            <h3>Google Scholar</h3>
+            <p>
+              <a href="{{ site.data.site_settings.contact.scholar_url }}" target="_blank" rel="noopener noreferrer">
+                {{ site.data.site_settings.contact.scholar_url }}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div>
-      <p>{{ site.data.site_settings.contact.press_contact_label }}</p>
-      <p><a href="{{ site.data.site_settings.contact.linkedin_url }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-      <p><a href="{{ site.data.site_settings.contact.scholar_url }}" target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
+    <div class="contact-downloads">
+      <h2 class="contact-block-title">Press Room Downloads</h2>
+      <p>Please email us about any adjustments you may need.</p>
     </div>
   </div>
 </section>
