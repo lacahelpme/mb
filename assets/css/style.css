@@ -649,6 +649,18 @@ h4:last-child {
   letter-spacing: 0.05em;
 }
 
+.video-teaser-event {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.video-teaser-talk-title {
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  color: var(--black);
+}
+
 /* Musings home */
 
 .musings-band {
