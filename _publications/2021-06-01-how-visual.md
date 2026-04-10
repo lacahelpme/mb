@@ -1,7 +1,7 @@
 ---
 title: "How visual programming powers complex data science"
 date: 2021-06-01
-excerpt: "Making sense of all of an organization’s data (and ideally enriching it with lots of data “out there”) is easy to say and still surprisingly hard to do.Rather than seeing holistically, how many people interact with content on our website..."
+excerpt: "As data science continues to grow up and pushes toward production, one question keeps coming up with practice team leaders: What is the appropriate way to do data science - coding or visual programming? "
 cover: "/assets/img/publications/cover2023-03-30.jpg"
 alt: "Placeholder cover image for How visual programming powers complex data science"
 button_label: "Read now"
