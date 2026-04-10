@@ -1367,32 +1367,33 @@ h4:last-child {
   background: var(--light);
 }
 
-.article-header {
-  background: var(--dark-2);
-  color: var(--white);
-  padding: clamp(2.8rem, 6vw, 4.7rem) 0 clamp(2.3rem, 5vw, 3.8rem);
+.article-subpage-intro {
+  background: var(--light);
+  color: var(--black);
+  padding: 150px 0 44px;
 }
 
-.article-kicker {
-  color: var(--accent);
+.article-subpage-kicker {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.9rem;
   font-weight: 800;
+  color: var(--mid);
   margin-bottom: 0.95rem;
 }
 
-.article-title {
+.article-subpage-title {
   font-size: clamp(2.45rem, 5vw, 4.2rem);
   line-height: 0.92;
   letter-spacing: -0.06em;
   font-weight: 800;
   max-width: 12ch;
   margin-bottom: 0.85rem;
+  color: var(--black);
 }
 
-.article-date {
-  color: rgba(255, 255, 255, 0.82);
+.article-subpage-date {
+  color: #606060;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 0.88rem;
@@ -1452,6 +1453,7 @@ h4:last-child {
   text-decoration: underline;
   text-underline-offset: 0.14em;
 }
+
 
 /* Footer */
 
@@ -1953,6 +1955,15 @@ a:focus-visible {
   .article-title {
     word-break: break-word;
   }
+
+  .article-subpage-intro {
+  padding: 126px 0 32px;
+}
+
+.article-subpage-title {
+  max-width: 100%;
+  word-break: break-word;
+}
 
   .contact-downloads {
     margin-top: 2.5rem;
