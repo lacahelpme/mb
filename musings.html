@@ -21,7 +21,7 @@ permalink: /musings/
     {% assign all_musings = site.musings | sort: 'date' | reverse %}
     <div class="musings-subpage-grid">
       {% for post in all_musings %}
-      <article class="musing-home-card musing-home-card-subpage">
+      <a href="{{ post.url | relative_url }}" class="musing-home-card musing-home-card-subpage musing-home-card-link">
         <div class="musing-tile musing-tile-subpage {% if forloop.first %}musing-tile-accent{% else %}musing-tile-dark{% endif %}">
           <div class="musing-tile-top">
             <div class="musing-tile-number">{{ forloop.index | prepend: '0' }}</div>
@@ -34,12 +34,12 @@ permalink: /musings/
           </div>
 
           <div class="musing-tile-actions">
-            <a class="button-outline {% if forloop.first %}button-outline-dark{% else %}button-outline-light{% endif %}" href="{{ post.url | relative_url }}">
+            <span class="button-outline {% if forloop.first %}button-outline-dark{% else %}button-outline-light{% endif %}">
               Read more
-            </a>
+            </span>
           </div>
         </div>
-      </article>
+      </a>
       {% endfor %}
     </div>
   </div>
