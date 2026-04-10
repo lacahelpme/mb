@@ -902,7 +902,7 @@ h4:last-child {
 .subpage-intro {
   background: var(--light);
   color: var(--black);
-  padding: 138px 0 44px;
+  padding: 150px 0 44px;
 }
 
 .subpage-intro-title {
@@ -920,7 +920,8 @@ h4:last-child {
   line-height: 1.55;
 }
 
-/* Videos listing */
+/* Video listings */
+
 
 .videos-listing {
   background: var(--light);
@@ -928,22 +929,23 @@ h4:last-child {
 
 .videos-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 34px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 46px 34px;
+  align-items: start;
 }
 
 .video-card {
   display: grid;
-  grid-template-columns: minmax(320px, 0.98fr) 1.02fr;
+  grid-template-columns: 1fr;
   gap: 18px;
   align-items: start;
-  padding-bottom: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.28);
-}
-
-.video-card:last-child {
   padding-bottom: 0;
   border-bottom: 0;
+}
+
+.video-card-media {
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.28);
 }
 
 .video-card-media video,
@@ -959,7 +961,7 @@ h4:last-child {
 .video-card-body {
   display: grid;
   align-content: start;
-  padding-top: 2px;
+  padding-top: 0;
 }
 
 .video-card-title {
@@ -967,7 +969,7 @@ h4:last-child {
   line-height: 1.06;
   letter-spacing: -0.03em;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
 .video-card-date {
@@ -979,10 +981,10 @@ h4:last-child {
 
 .video-card-excerpt {
   color: #404040;
-  max-width: 62ch;
   margin-bottom: 0;
   font-size: 0.96rem;
   line-height: 1.55;
+  max-width: none;
 }
 
 /* Publications listing */
@@ -1189,8 +1191,16 @@ h4:last-child {
   padding-top: clamp(2.5rem, 5vw, 4rem);
 }
 
+.publications-commentary-section {
+  background: var(--dark);
+}
+
 .publications-commentary-section .publications-band-head {
   align-items: center;
+}
+
+.publications-band-actions .button {
+  white-space: nowrap;
 }
 
 .subpage-text-lists {
@@ -1220,7 +1230,7 @@ h4:last-child {
   margin: 0;
   font-size: 0.98rem;
   line-height: 1.55;
-  color: #2f2f2f;
+  color: #606060;
 }
 
 .subpage-text-list a {
@@ -1269,6 +1279,14 @@ h4:last-child {
   line-height: 1.55;
   color: #4e4e4e;
   margin: 0;
+}
+
+.contact-info-item-label {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: var(--black);
 }
 
 .contact-follow-item h3 {
@@ -1510,7 +1528,8 @@ a:focus-visible {
   .footer-grid,
   .video-card,
   .publication-list-card,
-  .musing-list-card {
+  .musing-list-card,
+  .videos-grid {
     grid-template-columns: 1fr;
   }
 
