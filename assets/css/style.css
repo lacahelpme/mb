@@ -313,7 +313,7 @@ h4:last-child {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   column-gap: clamp(40px, 5vw, 88px);
   align-items: stretch;
-  min-height: 680px;
+  min-height: 620px;
   position: relative;
   z-index: 2;
 }
@@ -323,15 +323,15 @@ h4:last-child {
   display: flex;
   align-items: end;
   justify-content: flex-start;
-  min-height: 680px;
+  min-height: 620px;
   overflow: hidden;
   z-index: 1;
 }
 
 .hero-visual img {
-  width: min(100%, 520px);
+  width: min(100%, 500px);
   height: auto;
-  max-height: 620px;
+  max-height: 560px;
   object-fit: contain;
   object-position: left bottom;
 }
@@ -341,15 +341,15 @@ h4:last-child {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 680px;
-  padding: 126px 44px 46px 68px;
+  min-height: 620px;
+  padding: 148px 44px 40px 68px;
   z-index: 3;
 }
 
 .hero-panel::before {
   content: "";
   position: absolute;
-  inset: 96px 0 0 0;
+  inset: 118px 0 0 0;
   border-top: 1.5px solid rgba(255, 255, 255, 0.55);
   border-left: 1.5px solid rgba(255, 255, 255, 0.55);
   border-right: 1.5px solid rgba(255, 255, 255, 0.55);
@@ -363,16 +363,16 @@ h4:last-child {
   font-size: 0.98rem;
   line-height: 1.1;
   font-weight: 600;
-  margin: 0 0 18px 0;
+  margin: 0 0 22px 0;
   white-space: nowrap;
 }
 
 .hero-title {
-  font-size: clamp(3.2rem, 4.6vw, 4.5rem);
+  font-size: clamp(3.05rem, 4.3vw, 4.25rem);
   line-height: 0.9;
   letter-spacing: -0.065em;
   font-weight: 400;
-  margin: 0 0 88px 0;
+  margin: 0 0 74px 0;
   max-width: 7.2ch;
 }
 
@@ -1592,34 +1592,34 @@ a:focus-visible {
   }
 
   .hero-shell {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    column-gap: 36px;
-    min-height: 620px;
-  }
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 36px;
+  min-height: 580px;
+}
 
-  .hero-visual {
-    min-height: 620px;
-  }
+.hero-visual {
+  min-height: 580px;
+}
 
-  .hero-visual img {
-    width: min(100%, 430px);
-    max-height: 560px;
-  }
+.hero-visual img {
+  width: min(100%, 410px);
+  max-height: 520px;
+}
 
-  .hero-panel {
-    min-height: 620px;
-    padding: 112px 24px 42px 34px;
-  }
+.hero-panel {
+  min-height: 580px;
+  padding: 136px 24px 36px 34px;
+}
 
-  .hero-panel::before {
-    inset: 88px 0 0 0;
-  }
+.hero-panel::before {
+  inset: 108px 0 0 0;
+}
 
-  .hero-title {
-    font-size: clamp(2.8rem, 4.2vw, 3.9rem);
-    max-width: 6.6ch;
-    margin-bottom: 72px;
-  }
+.hero-title {
+  font-size: clamp(2.7rem, 4vw, 3.8rem);
+  max-width: 6.6ch;
+  margin-bottom: 62px;
+}
 
   .hero-actions .button {
     min-height: 40px;
@@ -1840,7 +1840,7 @@ a:focus-visible {
   }
 
   .subpage-intro {
-    padding: 108px 0 32px;
+    padding: 132px 0 32px;
   }
 
   .video-teaser-media video,
