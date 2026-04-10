@@ -1173,7 +1173,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
 }
 
 .footer-grid {
-  min-height: 560px;
+  min-height: 420px;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
