@@ -1997,9 +1997,9 @@ a:focus-visible {
   }
 
   .page-title,
-  .article-title {
-    word-break: break-word;
-  }
+ .article-subpage-title {
+  word-break: break-word;
+ }
 
   .article-subpage-intro {
   padding: 126px 0 32px;
