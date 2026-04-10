@@ -1,6 +1,8 @@
----
 # DUPLICATE THIS FILE INTO /_musings/ AND RENAME IT TO YYYY-MM-DD-slug.md
 
+# COPY EVERYTHING BELOW THIS LINE
+
+---
 title: "Title of the article"
 date: 2026-01-01
 excerpt: "Short summary shown on cards and listing pages."
