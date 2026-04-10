@@ -9,53 +9,59 @@ seo_description: "Contact details, press contact, and professional links for Mic
   <div class="container">
     <h1 class="subpage-intro-title">Contact</h1>
     <p class="subpage-intro-text">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
     </p>
   </div>
 </section>
 
 <section class="section contact-page-section">
   <div class="container">
+
     <div class="contact-grid">
+
+      <!-- LEFT: PRESS CONTACT -->
       <div class="contact-block">
         <h2 class="contact-block-title">Press Contact</h2>
 
-        <div class="contact-info-list">
-          <div class="contact-info-item">
-            <p class="contact-info-item-label">Address</p>
-            <p>
+        <div class="contact-icon-list">
+
+          <!-- ADDRESS -->
+          <div class="contact-icon-item">
+            <img src="{{ '/assets/img/general/Michael-Berthold-Website-Icons-Adress.png' | relative_url }}" alt="Address icon">
+            <span>
               {% for line in site.data.contact_page.press_contact.address_lines %}
                 {{ line }}{% unless forloop.last %}<br>{% endunless %}
               {% endfor %}
-            </p>
+            </span>
           </div>
 
-          <div class="contact-info-item">
-            <p class="contact-info-item-label">{{ site.data.contact_page.press_contact.phone_label }}</p>
-            <p>
-              <a href="tel:{{ site.data.contact_page.press_contact.phone_link }}">
-                {{ site.data.contact_page.press_contact.phone_display }}
-              </a>
-            </p>
+          <!-- PHONE -->
+          <div class="contact-icon-item">
+            <img src="{{ '/assets/img/general/Michael-Berthold-Website-Icons-Phone.png' | relative_url }}" alt="Phone icon">
+            <a href="tel:{{ site.data.contact_page.press_contact.phone_link }}">
+              {{ site.data.contact_page.press_contact.phone_display }}
+            </a>
           </div>
 
-          <div class="contact-info-item">
-            <p class="contact-info-item-label">{{ site.data.contact_page.press_contact.email_label }}</p>
-            <p>
-              <a href="mailto:{{ site.data.contact_page.press_contact.email }}">
-                {{ site.data.contact_page.press_contact.email }}
-              </a>
-            </p>
+          <!-- EMAIL -->
+          <div class="contact-icon-item">
+            <img src="{{ '/assets/img/general/Michael-Berthold-Website-Icons-Message.png' | relative_url }}" alt="Email icon">
+            <a href="mailto:{{ site.data.contact_page.press_contact.email }}">
+              {{ site.data.contact_page.press_contact.email }}
+            </a>
           </div>
+
         </div>
       </div>
 
+      <!-- RIGHT: FOLLOW -->
       <div class="contact-block">
         <h2 class="contact-block-title">Where to follow</h2>
 
         <div class="contact-follow-list">
-          <div class="contact-follow-item">
-            <h3>{{ site.data.contact_page.follow.linkedin_label }}</h3>
+
+          <div class="contact-follow-row">
+            <h3>LinkedIn</h3>
             <p>
               <a href="{{ site.data.contact_page.follow.linkedin_url }}" target="_blank" rel="noopener noreferrer">
                 {{ site.data.contact_page.follow.linkedin_url }}
@@ -63,21 +69,25 @@ seo_description: "Contact details, press contact, and professional links for Mic
             </p>
           </div>
 
-          <div class="contact-follow-item">
-            <h3>{{ site.data.contact_page.follow.bluesky_label }}</h3>
+          <div class="contact-follow-row">
+            <h3>Bluesky</h3>
             <p>
               <a href="{{ site.data.contact_page.follow.bluesky_url }}" target="_blank" rel="noopener noreferrer">
                 {{ site.data.contact_page.follow.bluesky_url }}
               </a>
             </p>
           </div>
+
         </div>
       </div>
+
     </div>
 
+    <!-- DOWNLOADS -->
     <div class="contact-downloads">
       <h2 class="contact-block-title">Press Room Downloads</h2>
       <p>{{ site.data.contact_page.downloads_text }}</p>
     </div>
+
   </div>
 </section>
