@@ -1373,6 +1373,10 @@ h4:last-child {
   padding: 150px 0 44px;
 }
 
+.article-shell {
+  max-width: 980px;
+}
+
 .article-subpage-kicker {
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1387,33 +1391,45 @@ h4:last-child {
   line-height: 0.92;
   letter-spacing: -0.06em;
   font-weight: 800;
-  max-width: 12ch;
-  margin-bottom: 0.85rem;
+  max-width: 18ch;
+  margin-bottom: 1rem;
   color: var(--black);
+  text-wrap: balance;
 }
 
-.article-subpage-date {
-  color: #606060;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-size: 0.88rem;
-  font-weight: 700;
-}
-
-.article-subpage-author {
+.article-subpage-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
   color: #606060;
   font-size: 0.95rem;
-  margin-bottom: 0.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.article-subpage-date,
+.article-subpage-author {
+  margin: 0;
+  color: #606060;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+.article-subpage-author::before {
+  content: "•";
+  margin-right: 0.5rem;
 }
 
 .article-body {
-  padding-top: clamp(2.8rem, 6vw, 4.7rem);
+  padding-top: clamp(2.2rem, 5vw, 3.5rem);
   padding-bottom: clamp(4rem, 8vw, 6rem);
-  max-width: 860px;
 }
 
 .article-body > * {
-  max-width: 720px;
+  max-width: 100%;
 }
 
 .article-body p,
@@ -1459,7 +1475,6 @@ h4:last-child {
   text-decoration: underline;
   text-underline-offset: 0.14em;
 }
-
 
 /* Footer */
 
@@ -1968,7 +1983,18 @@ a:focus-visible {
 
 .article-subpage-title {
   max-width: 100%;
-  word-break: break-word;
+  word-break: normal;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+.article-subpage-meta {
+  gap: 0.35rem;
+  font-size: 0.82rem;
+}
+
+.article-body {
+  padding-top: 2rem;
 }
 
   .contact-downloads {
