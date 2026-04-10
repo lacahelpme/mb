@@ -7,12 +7,11 @@ lang: en
 permalink: /videos/
 ---
 
-<section class="page-hero page-hero-dark">
+<section class="subpage-intro">
   <div class="container">
-    <p class="page-kicker">VIDEOS</p>
-    <h1 class="page-title">Videos</h1>
-    <p class="page-intro">
-      Talks, interviews, presentations, and selected appearances exploring AI, data science, innovation, and applied intelligence.
+    <h1 class="subpage-intro-title">Conference Talks &amp; Presentations</h1>
+    <p class="subpage-intro-text">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
     </p>
   </div>
 </section>
@@ -47,7 +46,7 @@ permalink: /videos/
           {% endif %}
 
           {% if video.external_url %}
-          <a class="button-outline" href="{{ video.external_url }}" target="_blank" rel="noopener noreferrer">
+          <a class="button-outline button-outline-dark" href="{{ video.external_url }}" target="_blank" rel="noopener noreferrer">
             {{ video.button_label | default: "Watch externally" }}
           </a>
           {% endif %}
