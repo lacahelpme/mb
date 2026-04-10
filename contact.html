@@ -22,19 +22,30 @@ seo_description: "Contact details, press contact, and professional links for Mic
 
         <div class="contact-info-list">
           <div class="contact-info-item">
+            <p class="contact-info-item-label">Address</p>
             <p>
-              {% for line in site.data.site_settings.contact.address_lines %}
+              {% for line in site.data.contact_page.press_contact.address_lines %}
                 {{ line }}{% unless forloop.last %}<br>{% endunless %}
               {% endfor %}
             </p>
           </div>
 
           <div class="contact-info-item">
-            <p><a href="tel:{{ site.data.site_settings.contact.phone_link }}">{{ site.data.site_settings.contact.phone_display }}</a></p>
+            <p class="contact-info-item-label">{{ site.data.contact_page.press_contact.phone_label }}</p>
+            <p>
+              <a href="tel:{{ site.data.contact_page.press_contact.phone_link }}">
+                {{ site.data.contact_page.press_contact.phone_display }}
+              </a>
+            </p>
           </div>
 
           <div class="contact-info-item">
-            <p><a href="mailto:{{ site.data.site_settings.contact.email }}">{{ site.data.site_settings.contact.email }}</a></p>
+            <p class="contact-info-item-label">{{ site.data.contact_page.press_contact.email_label }}</p>
+            <p>
+              <a href="mailto:{{ site.data.contact_page.press_contact.email }}">
+                {{ site.data.contact_page.press_contact.email }}
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -44,19 +55,19 @@ seo_description: "Contact details, press contact, and professional links for Mic
 
         <div class="contact-follow-list">
           <div class="contact-follow-item">
-            <h3>LinkedIn</h3>
+            <h3>{{ site.data.contact_page.follow.linkedin_label }}</h3>
             <p>
-              <a href="{{ site.data.site_settings.contact.linkedin_url }}" target="_blank" rel="noopener noreferrer">
-                {{ site.data.site_settings.contact.linkedin_url }}
+              <a href="{{ site.data.contact_page.follow.linkedin_url }}" target="_blank" rel="noopener noreferrer">
+                {{ site.data.contact_page.follow.linkedin_url }}
               </a>
             </p>
           </div>
 
           <div class="contact-follow-item">
-            <h3>Google Scholar</h3>
+            <h3>{{ site.data.contact_page.follow.bluesky_label }}</h3>
             <p>
-              <a href="{{ site.data.site_settings.contact.scholar_url }}" target="_blank" rel="noopener noreferrer">
-                {{ site.data.site_settings.contact.scholar_url }}
+              <a href="{{ site.data.contact_page.follow.bluesky_url }}" target="_blank" rel="noopener noreferrer">
+                {{ site.data.contact_page.follow.bluesky_url }}
               </a>
             </p>
           </div>
@@ -66,7 +77,7 @@ seo_description: "Contact details, press contact, and professional links for Mic
 
     <div class="contact-downloads">
       <h2 class="contact-block-title">Press Room Downloads</h2>
-      <p>Please email us about any adjustments you may need.</p>
+      <p>{{ site.data.contact_page.downloads_text }}</p>
     </div>
   </div>
 </section>
