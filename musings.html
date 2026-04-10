@@ -7,37 +7,37 @@ lang: en
 permalink: /musings/
 ---
 
-<section class="page-hero page-hero-dark">
+<section class="subpage-intro">
   <div class="container">
-    <p class="page-kicker">MUSINGS</p>
-    <h1 class="page-title">Musings</h1>
-    <p class="page-intro">
-      Thoughts, essays, and reflections on data science, AI, innovation, leadership, and the broader questions around technology.
+    <h1 class="subpage-intro-title">Recent Musings</h1>
+    <p class="subpage-intro-text">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
     </p>
   </div>
 </section>
 
-<section class="section musings-listing">
+<section class="section musings-listing musings-listing-cards">
   <div class="container">
     {% assign all_musings = site.musings | sort: 'date' | reverse %}
-    <div class="musings-list-grid">
+    <div class="musings-subpage-grid">
       {% for post in all_musings %}
-      <article class="musing-list-card">
-        <div class="musing-list-meta">
-          <span class="musing-list-number">{{ forloop.index | prepend: '0' }}</span>
-          <span class="musing-list-date">{{ post.date | date: "%B %d, %Y" }}</span>
-        </div>
+      <article class="musing-home-card musing-home-card-subpage">
+        <div class="musing-tile musing-tile-subpage {% if forloop.first %}musing-tile-accent{% else %}musing-tile-dark{% endif %}">
+          <div class="musing-tile-top">
+            <div class="musing-tile-number">{{ forloop.index | prepend: '0' }}</div>
+            <div class="musing-tile-arrow">→</div>
+          </div>
 
-        <div class="musing-list-body">
-          <h2 class="musing-list-title">
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </h2>
+          <div class="musing-tile-body">
+            <h2>{{ post.title }}</h2>
+            <p class="musing-tile-date">{{ post.date | date: "%B %d, %Y" }}</p>
+          </div>
 
-          {% if post.excerpt %}
-          <p class="musing-list-excerpt">{{ post.excerpt }}</p>
-          {% endif %}
-
-          <a class="button-outline" href="{{ post.url | relative_url }}">Read more</a>
+          <div class="musing-tile-actions">
+            <a class="button-outline {% if forloop.first %}button-outline-dark{% else %}button-outline-light{% endif %}" href="{{ post.url | relative_url }}">
+              Read more
+            </a>
+          </div>
         </div>
       </article>
       {% endfor %}
