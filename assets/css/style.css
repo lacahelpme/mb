@@ -293,7 +293,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child {
   display: grid;
   grid-template-columns: minmax(0, 1fr) var(--hero-panel-w);
   align-items: stretch;
-  min-height: min(680px, 82vh);
+  min-height: min(680px, 95vh);
   gap: 0;
   position: relative;
   z-index: 2;
