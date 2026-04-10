@@ -7,49 +7,123 @@ lang: en
 permalink: /publications/
 ---
 
-<section class="page-hero page-hero-dark">
+<section class="subpage-intro">
   <div class="container">
-    <p class="page-kicker">PUBLICATIONS</p>
-    <h1 class="page-title">Publications</h1>
-    <p class="page-intro">
-      A curated selection of articles, interviews, and media publications related to Michael R. Berthold and his work.
+    <h1 class="subpage-intro-title">Publications</h1>
+    <p class="subpage-intro-text">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
     </p>
   </div>
 </section>
 
-<section class="section publications-listing">
+<section class="books-band section publications-books-section">
   <div class="container">
-    {% assign all_publications = site.publications | sort: 'date' | reverse %}
-    <div class="publications-list-grid">
-      {% for post in all_publications %}
-      <article class="publication-list-card">
-        <div class="publication-list-thumb">
-          <img src="{{ post.cover | relative_url }}" alt="{{ post.alt }}">
+    <div class="books-head">
+      <h2 class="section-title section-title-light">Books and Textbooks</h2>
+
+      <a class="books-tip"
+         href="https://link.springer.com/content/pdf/10.1007/978-3-642-31830-6.pdf"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="books-tip-label">Tip</span>
+        <span>
+          You have full access to this
+          <span class="books-tip-highlight">open access</span>
+          book: Bisociative Knowledge Discovery
+        </span>
+      </a>
+    </div>
+
+    <div class="books-grid books-grid-all">
+      {% assign all_books = site.books | sort: 'date' | reverse %}
+      {% for book in all_books %}
+      <article class="book-card-home">
+        <div class="book-card-image">
+          <img src="{{ book.cover | relative_url }}" alt="{{ book.alt }}">
         </div>
 
-        <div class="publication-list-body">
-          {% if post.source_name %}
-          <p class="publication-list-source">{{ post.source_name }}</p>
-          {% endif %}
+        <div class="book-card-content">
+          <h3 class="book-card-title">{{ book.title }}</h3>
+          <p class="book-card-authors">{{ book.author }}</p>
+          <p class="book-card-year">({{ book.year }})</p>
+          <p class="book-card-excerpt">{{ book.excerpt }}</p>
 
-          <h2 class="publication-list-title">{{ post.title }}</h2>
-
-          {% if post.date %}
-          <p class="publication-list-date">{{ post.date | date: "%-d %B %Y" }}</p>
-          {% endif %}
-
-          {% if post.excerpt %}
-          <p class="publication-list-excerpt">{{ post.excerpt }}</p>
-          {% endif %}
-
-          {% if post.external_url %}
-          <a class="button-outline" href="{{ post.external_url }}" target="_blank" rel="noopener noreferrer">
-            {{ post.button_label | default: "Read now" }}
+          {% if book.external_url %}
+          <a class="button-outline {% if book.button_style == 'accent' %}button-outline-accent{% else %}button-outline-light{% endif %}"
+             href="{{ book.external_url }}"
+             target="_blank"
+             rel="noopener noreferrer">
+            {{ book.button_label }}
           </a>
           {% endif %}
         </div>
       </article>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="publications-band section publications-commentary-section">
+  <div class="container">
+    <div class="publications-band-head">
+      <h2 class="section-title section-title-light">Select Thought Leadership / Industry Commentary</h2>
+      <div class="publications-band-actions">
+        <a class="button button-dark" href="{{ '/contact/' | relative_url }}">PRESS CONTACT</a>
+      </div>
+    </div>
+
+    <div class="publications-home-grid">
+      {% assign all_publications = site.publications | sort: 'date' | reverse %}
+      {% for post in all_publications %}
+      <a class="publication-home-card"
+         href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ '/publications/' | relative_url }}{% endif %}"
+         {% if post.external_url %}target="_blank" rel="noopener noreferrer"{% endif %}>
+
+        <div class="publication-home-thumb">
+          <img src="{{ post.cover | relative_url }}" alt="{{ post.alt }}">
+        </div>
+
+        <div class="publication-home-body">
+          {% if post.source_name %}
+            <p class="publication-home-source">{{ post.source_name }}</p>
+          {% endif %}
+
+          <h3 class="publication-home-title">{{ post.title }}</h3>
+
+          {% if post.date %}
+          <p class="publication-home-date">{{ post.date | date: "%-d %B %Y" }}</p>
+          {% endif %}
+
+          {% if post.excerpt %}
+          <p class="publication-home-excerpt">{{ post.excerpt }}</p>
+          {% endif %}
+
+          <p class="publication-home-readmore">Read more</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="subpage-text-lists section">
+  <div class="container">
+    <div class="subpage-text-block">
+      <h2 class="subpage-text-title">Edited Volumes</h2>
+      <div class="subpage-text-list">
+        {% for item in site.data.site_settings.publications.edited_volumes %}
+        <p>{{ item }}</p>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="subpage-text-block">
+      <h2 class="subpage-text-title">Peer Reviewed Publications</h2>
+      <div class="subpage-text-list">
+        {% for item in site.data.site_settings.publications.peer_reviewed_publications %}
+        <p>{{ item }}</p>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
