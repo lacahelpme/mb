@@ -204,15 +204,21 @@ h4:last-child {
 /* Header */
 
 .site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 30;
 }
 
-.site-header-dark {
+.site-header-home {
+  position: absolute;
+  top: 0;
+  left: 0;
   background: transparent;
+  color: var(--white);
+}
+
+.site-header-subpage {
+  position: relative;
+  background: var(--black);
   color: var(--white);
 }
 
@@ -258,6 +264,15 @@ h4:last-child {
 .primary-nav a:hover,
 .primary-nav a:focus-visible {
   color: var(--accent);
+}
+
+.primary-nav ul li:last-child {
+  margin-left: auto;
+}
+
+.primary-nav .button-header {
+  min-width: 170px;
+  white-space: nowrap;
 }
 
 .header-cta {
@@ -902,7 +917,7 @@ h4:last-child {
 .subpage-intro {
   background: var(--light);
   color: var(--black);
-  padding: 150px 0 44px;
+  padding: 56px 0 44px;
 }
 
 .subpage-intro-title {
@@ -1791,7 +1806,7 @@ a:focus-visible {
   }
 
   .subpage-intro {
-    padding: 108px 0 32px;
+    padding: 40px 0 32px;
   }
 
   .video-teaser-media video,
