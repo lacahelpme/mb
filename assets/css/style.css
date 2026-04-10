@@ -794,6 +794,7 @@ h4:last-child {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
+
 /* Publications home */
 
 .publications-band {
@@ -1640,34 +1641,34 @@ a:focus-visible {
   }
 
   .hero-shell {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  column-gap: 36px;
-  min-height: 580px;
-}
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 36px;
+    min-height: 580px;
+  }
 
-.hero-visual {
-  min-height: 580px;
-}
+  .hero-visual {
+    min-height: 580px;
+  }
 
-.hero-visual img {
-  width: min(100%, 410px);
-  max-height: 520px;
-}
+  .hero-visual img {
+    width: min(100%, 410px);
+    max-height: 520px;
+  }
 
-.hero-panel {
-  min-height: 580px;
-  padding: 136px 24px 36px 34px;
-}
+  .hero-panel {
+    min-height: 580px;
+    padding: 136px 24px 36px 34px;
+  }
 
-.hero-panel::before {
-  inset: 108px 0 0 0;
-}
+  .hero-panel::before {
+    inset: 108px 0 0 0;
+  }
 
-.hero-title {
-  font-size: clamp(2.7rem, 4vw, 3.8rem);
-  max-width: 6.6ch;
-  margin-bottom: 62px;
-}
+  .hero-title {
+    font-size: clamp(2.7rem, 4vw, 3.8rem);
+    max-width: 6.6ch;
+    margin-bottom: 62px;
+  }
 
   .hero-actions .button {
     min-height: 40px;
@@ -1831,10 +1832,11 @@ a:focus-visible {
     left: auto;
     bottom: auto;
     width: min(100%, 360px);
-    height: 320px;
+    height: 360px;
     min-height: 0;
-    margin: 0 auto 14px;
+    margin: 0 auto 0;
     order: 1;
+    overflow: visible;
   }
 
   .hero-visual img {
@@ -1843,18 +1845,49 @@ a:focus-visible {
     max-height: none;
     object-fit: contain;
     object-position: center bottom;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .hero-visual::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    bottom: -1px;
+    height: 42%;
+    background: linear-gradient(
+      to bottom,
+      rgba(47, 47, 47, 0) 0%,
+      rgba(47, 47, 47, 0.35) 38%,
+      rgba(47, 47, 47, 0.78) 68%,
+      rgba(47, 47, 47, 1) 100%
+    );
+    pointer-events: none;
+    z-index: 3;
   }
 
   .hero-panel {
     min-height: auto;
     height: auto;
     padding: 0 18px 28px;
-    margin: 0;
+    margin: -34px 0 0;
     max-width: none;
     width: 100%;
     order: 2;
     align-items: center;
     text-align: center;
+    position: relative;
+    z-index: 4;
   }
 
   .hero-panel::before {
@@ -1864,19 +1897,30 @@ a:focus-visible {
   .hero-kicker {
     white-space: normal;
     text-align: center;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
+    color: var(--white);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    font-weight: 600;
   }
 
   .hero-title {
-    font-size: clamp(2.6rem, 12vw, 4rem);
+    font-size: clamp(2.8rem, 12vw, 4rem);
     max-width: 8ch;
-    margin: 0 0 30px 0;
+    margin: 0 0 24px 0;
     text-align: center;
+    line-height: 0.92;
   }
 
   .hero-actions {
     justify-content: center;
     width: 100%;
+    margin-top: 0;
+  }
+
+  .hero-actions .button {
+    min-height: 48px;
+    padding: 0 28px;
   }
 
   .hero-actions .hero-arrow {
@@ -1997,29 +2041,29 @@ a:focus-visible {
   }
 
   .page-title,
- .article-subpage-title {
-  word-break: break-word;
- }
+  .article-subpage-title {
+    word-break: break-word;
+  }
 
   .article-subpage-intro {
-  padding: 126px 0 32px;
-}
+    padding: 126px 0 32px;
+  }
 
-.article-subpage-title {
-  max-width: 100%;
-  word-break: normal;
-  overflow-wrap: break-word;
-  text-wrap: balance;
-}
+  .article-subpage-title {
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-wrap: balance;
+  }
 
-.article-subpage-meta {
-  gap: 0.35rem;
-  font-size: 0.82rem;
-}
+  .article-subpage-meta {
+    gap: 0.35rem;
+    font-size: 0.82rem;
+  }
 
-.article-body {
-  padding-top: 2rem;
-}
+  .article-body {
+    padding-top: 2rem;
+  }
 
   .contact-downloads {
     margin-top: 2.5rem;
