@@ -155,7 +155,12 @@ Until 2025, CEO of the co-founded data analytics platform KNIME, which has grown
         {% elsif latest_video.thumbnail %}
           <img src="{{ latest_video.thumbnail | relative_url }}" alt="{{ latest_video.alt | default: latest_video.title }}">
         {% endif %}
-        <p class="video-teaser-caption">{{ latest_video.title }}</p>
+        <p class="video-teaser-caption">
+     {% if latest_video.event_name and latest_video.event_name != "" %}
+    <span class="video-teaser-event">{{ latest_video.event_name }}</span><br>
+  {% endif %}
+  <span class="video-teaser-talk-title">{{ latest_video.title }}</span>
+</p>
       {% endif %}
     </div>
   </div>
