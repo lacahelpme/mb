@@ -245,3 +245,165 @@
     “Pattern Graphs: Combining Multivariate Time Series and Labelled Interval Sequences for Classification”,
     Springer, 2013.
   url: ''
+
+  - text: >-
+    Akbar, Zaenal; Ivanova, Violeta N.; Berthold, Michael R.
+    “Parallel Data Mining Revisited: Better, Not Faster”,
+    IDA 2012, 23-34.
+  url: ''
+
+- text: >-
+    Anzali, S.; Berthold, Michael R.; Fioravanzo, E.; Neagu, D.;
+    Péry, A.R.R.; Worth, A.P.; Yang, C.; Cronin, M.T.D.; Richarz, A.-N.
+    “Development of computational models for the risk assessment of cosmetic ingredients”,
+    IFSCC Magazine, 15(4):249-255, 2012.
+  url: ''
+
+- text: >-
+    Berthold, Michael R.
+    “Towards Bisociative Knowledge Discovery”,
+    LNCS 7250:1-10, 2012.
+  url: ''
+
+- text: >-
+    Berthold, Michael R.
+    “From Patterns to Discoveries”,
+    Journeys to Data Mining, 43-49, 2012.
+  url: ''
+
+- text: >-
+    Dietz, Christian; Horn, Martin; Berthold, Michael R.
+    “Integrative Open-Source Software für die Bildanalyse in der Biologie”,
+    BioPhotonik, 38-40, 2012.
+  url: ''
+
+- text: >-
+    Dubitzky, Werner; Kötter, Tobias; Schmidt, Oliver; Berthold, Michael R.
+    “Towards Creative Information Exploration Based on Koestler's Concept of Bisociation”,
+    LNCS 7250:11-32, 2012.
+  url: ''
+
+- text: >-
+    Eliceiri, Kevin W.; Berthold, Michael R.; Goldberg, Ilya G.; Ibanez, Luis;
+    Manjunath, B. S.; Martone, Maryann E.; Murphy, Robert F.; Peng, Hanchuan;
+    Plant, Anne L.; Roysam, Badrinath; Stuurmann, Nico; Swedlow, Jason R.;
+    Tomancak, Pavel; Carpenter, Anne E.
+    “Biological imaging software tools”,
+    Nature Methods, 9:697-710, 2012.
+  url: ''
+
+- text: >-
+    Höppner, Frank; Peter, Sebastian; Berthold, Michael R.
+    “Enriching Multivariate Temporal Patterns with Context Information to Support Classification”,
+    Springer, 2012.
+  url: ''
+
+- text: >-
+    Haun, Stefan; Gossen, Tatiana; Nürnberger, Andreas; Kötter, Tobias;
+    Thiel, Kilian; Berthold, Michael R.
+    “On the Integration of Graph Exploration and Data Analysis: The Creative Exploration Toolkit”,
+    LNCS 7250:301-312, 2012.
+  url: ''
+
+- text: >-
+    Kötter, Tobias; Berthold, Michael R.
+    “(Missing) Concept Discovery in Heterogeneous Information Networks”,
+    LNCS 7250:230-245, 2012.
+  url: ''
+
+- text: >-
+    Kötter, Tobias; Berthold, Michael R.
+    “From Information Networks to Bisociative Information Networks”,
+    LNCS 7250:33-50, 2012.
+  url: ''
+
+- text: >-
+    Klauser, Benedikt; Saragliadis, Athanasios; Ausländer, Simon; Wieland, Markus;
+    Berthold, Michael R.; Hartig, Jörg S.
+    “Post-transcriptional Boolean computation by combining aptazymes controlling mRNA translation initiation and tRNA activation”,
+    Molecular BioSystems, 8:2242-2248, 2012.
+  url: ''
+
+- text: >-
+    Meinl, Thorsten; Wiswedel, Bernd; Berthold, Michael R.
+    “Workflow tools for managing biological and chemical data”,
+    Wiley, 2012.
+  url: ''
+
+- text: >-
+    Nagel, Uwe; Thiel, Kilian; Kötter, Tobias; Piatek, Dawid; Berthold, Michael R.
+    “Towards Discovery of Subgraph Bisociations”,
+    LNCS 7250:263-284, 2012.
+  url: ''
+
+- text: >-
+    Peter, Sebastian; Höppner, Frank; Berthold, Michael R.
+    “Pattern Graphs: A Knowledge-Based Tool for Multivariate Temporal Pattern Retrieval”,
+    IS 2012.
+  url: ''
+
+- text: >-
+    Peter, Sebastian; Höppner, Frank; Berthold, Michael R.
+    “Learning Pattern Graphs for Multivariate Temporal Pattern Retrieval”,
+    IDA 2012.
+  url: ''
+
+- text: >-
+    Thiel, Kilian; Berthold, Michael R.
+    “Node Similarities from Spreading Activation”,
+    LNCS 7250:246-262, 2012.
+  url: ''
+
+- text: >-
+    Adä, Iris; Berthold, Michael R.
+    “Unifying Change: Towards a Framework for Detecting the Unexpected”,
+    ICDMW 2011.
+  url: ''
+
+- text: >-
+    Berthold, Michael R.
+    “Bisociative Knowledge Discovery”,
+    IDA 2011, LNCS7014:1-7.
+  url: ''
+
+- text: >-
+    Horn, Martin; Berthold, Michael R.
+    “Towards active segmentation of cell images”,
+    IEEE ISBI, 177-181, 2011.
+  url: ''
+
+- text: >-
+    Kötter, Tobias; Berthold, Michael R.
+    “(Missing) Concept Discovery in Heterogeneous Information Networks”,
+    Computational Creativity, 2011.
+  url: ''
+
+- text: >-
+    Meinl, Thorsten; Ostermann, Claude; Berthold, Michael R.
+    “Maximum-Score Diversity Selection for Early Drug Discovery”,
+    Journal of Chemical Information and Modeling, 51(2):237-247, 2011.
+  url: ''
+
+- text: >-
+    Morent, Dominik; Stathatos, Konstantinos; Lin, Wen-Ching; Berthold, Michael R.
+    “Comprehensive PMML Preprocessing in KNIME”,
+    KDD Workshop, 2011.
+  url: ''
+
+- text: >-
+    Nagel, Uwe; Thiel, Kilian; Kötter, Tobias; Piatek, Dawid; Berthold, Michael R.
+    “Bisociative Discovery of Interesting Relations Between Domains”,
+    IDA 2011, LNCS7014:306-317.
+  url: ''
+
+- text: >-
+    Schimanski, Goesta; Schimanski, Esther; Berthold, Michael R.
+    “Diagnostic Findings in Stapes Revision Surgery - Retrospective of 26 Years”,
+    Otology & Neurotology, 32:373-383, 2011.
+  url: ''
+
+- text: >-
+    Wiswedel, Bernd; Berthold, Michael R.
+    “Supervised Learning in Parallel Universes using Neighborgrams”,
+    IDA 2011, LNCS7014:388-400.
+  url: ''
