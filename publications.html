@@ -131,15 +131,7 @@ permalink: /publications/
 
       <ul class="subpage-text-list">
         {% for item in site.data.edited_volumes %}
-        <li>
-          {% if item.url and item.url != "" %}
-            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-              {{ item.text }}
-            </a>
-          {% else %}
-            {{ item.text }}
-          {% endif %}
-        </li>
+        <li>{{ item }}</li>
         {% endfor %}
       </ul>
     </div>
@@ -150,15 +142,7 @@ permalink: /publications/
 
       <ul class="subpage-text-list">
         {% for item in site.data.peer_reviewed_publications %}
-        <li>
-          {% if item.url and item.url != "" %}
-            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-              {{ item.text }}
-            </a>
-          {% else %}
-            {{ item.text }}
-          {% endif %}
-        </li>
+        <li>{{ item }}</li>
         {% endfor %}
       </ul>
     </div>
