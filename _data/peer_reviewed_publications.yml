@@ -114,3 +114,134 @@
     “Automatic Taxonomy Extraction from Bipartite Graphs”,
     ICDM 2015, 221-230.
   url: ''
+
+  - text: >-
+    Baur, Jennifer; Moreno-Villanueva, Maria; Kötter, Tobias; Sindlinger, Thilo;
+    Bürkle, Alexander; Berthold, Michael R.; Junk, Michael
+    “MARK-AGE data management: Cleaning, exploration and visualization of data”,
+    Mechanisms of Ageing and Development, 151:38-44, 2015.
+  url: ''
+
+- text: >-
+    Baur, Jennifer; Kötter, Tobias; Moreno-Villanueva, Maria; Sindlinger, Thilo;
+    Berthold, Michael R.; Bürkle, Alexander; Junk, Michael
+    “The MARK-AGE extended database: data integration and pre-processing”,
+    Mechanisms of Ageing and Development, 151:31-37, 2015.
+  url: ''
+
+- text: >-
+    Nicola, George; Berthold, Michael R.; Hedrick, Michael P.; Gilson, Michael K.
+    “Connecting proteins with drug-like compounds: Open source drug discovery workflows with BindingDB and KNIME”,
+    Database: The Journal of Biological Databases and Curation, 2015.
+  url: ''
+
+- text: >-
+    Kötter, Tobias; Günnemann, Stephan; Faloutsos, Christos; Berthold, Michael R.
+    “Extracting Taxonomies from Bipartite Graphs”,
+    WWW 2015 Companion, 51-52.
+  url: ''
+
+- text: >-
+    Fillbrunn, Alexander; Berthold, Michael R.
+    “Diversity-driven Widening of Hierarchical Agglomerative Clustering”,
+    IDA 2015, LNCS9385, 84-94, 2015.
+  url: ''
+
+- text: >-
+    Aiche, Stephan; Sachsenberg, Timo; Kenar, Erhan; Walzer, Mathias;
+    Wiswedel, Bernd; Kristl, Theresa; Boyles, Matthew; Duschl, Albert;
+    Huber, Christian G.; Berthold, Michael R.; Reinert, Knut; Kohlbacher, Oliver
+    “Workflows for automated downstream data analysis and visualization in large-scale computational mass spectrometry”,
+    Proteomics, 15:1443-1447, 2015.
+  url: ''
+
+- text: >-
+    Moreno-Villanueva, Maria; Kötter, Tobias; Sindlinger, Thilo; Baur, Jennifer;
+    Oehlke, Sebastian; Bürkle, Alexander; Berthold, Michael R.
+    “The MARK-AGE phenotypic database: Structure and strategy”,
+    Mechanisms of Ageing and Development, 151:26-30, 2015.
+  url: ''
+
+- text: >-
+    Dreser, Nadine; Zimmer, Bastian; Dietz, Christian; Sügis, Elena;
+    Pallocca, Giorgia; Nyffeler, Johanna; Meisig, Johannes; Blüthgen, Nils;
+    Berthold, Michael R.; Waldmann, Tanja; Leist, Marcel
+    “Grouping of histone deacetylase inhibitors and other toxicants disturbing neural crest migration
+    by transcriptional profiling”,
+    NeuroToxicology, 50:56-70, 2015.
+  url: ''
+
+- text: >-
+    Kötter, Tobias; Günnemann, Stephan; Berthold, Michael R.; Faloutsos, Christos
+    “Fault-Tolerant Concept Detection in Information Networks”,
+    Advances in Knowledge Discovery and Data Mining, 410-421, 2014.
+  url: ''
+
+- text: >-
+    Sampson, Oliver; Berthold, Michael R.
+    “Widened KRIMP: Better Performance through Diverse Parallelism”,
+    IDA 2014.
+  url: ''
+
+- text: >-
+    Adä, Iris; Berthold, Michael R.
+    “EVE: a framework for event detection”,
+    Evolving Systems, 4(1):61-70, 2013.
+  url: ''
+
+- text: >-
+    Adä, Iris; Berthold, Michael R.
+    “Detecting Events in Molecular Dynamics Simulations”,
+    IDA 2013.
+  url: ''
+
+- text: >-
+    Beisken, Stephan; Meinl, Thorsten; Wiswedel, Bernd; de Figueiredo, Luis;
+    Berthold, Michael; Steinbeck, Christoph
+    “KNIME-CDK: Workflow-driven cheminformatics”,
+    BMC Bioinformatics, 14(1):257, 2013.
+  url: ''
+
+- text: >-
+    Berthold, Michael R.; Wiswedel, Bernd; Gabriel, Thomas R.
+    “Fuzzy Logic in KNIME: Modules for Approximate Reasoning”,
+    International Journal of Computational Intelligence Systems, 6:34-45, 2013.
+  url: ''
+
+- text: >-
+    Dietz, Christian; Horn, Martin; Fyson, Heather; Berthold, Michael R.
+    “Integrative open-source software enables image analysis in biological sciences”,
+    Photonik International, 2013.
+  url: ''
+
+- text: >-
+    Fillbrunn, Alexander; Adä, Iris; Gabriel, Thomas R.; Berthold, Michael R.
+    “Ensembles and PMML in KNIME”,
+    KDD Workshop, 2013.
+  url: ''
+
+- text: >-
+    Gesing, Sandra; Atkinson, Malcolm; Klampanos, Iraklis; Galea, Michelle;
+    Berthold, Michael R.; Barbera, Robert; Scardaci, Diego; Terstyanszky, Gabor;
+    Kiss, Tamas; Kacsuk, Peter
+    “The Demand for Consistent Web-Based Workflow Editors”,
+    WORKS 2013.
+  url: ''
+
+- text: >-
+    Horn, Martin; Berthold, Michael R.
+    “Learning Precise Local Boundaries in Images from Human Tracings”,
+    ICIAP 2013.
+  url: ''
+
+- text: >-
+    Ivanova, Violeta; Berthold, Michael R.
+    “Diversity-Driven Widening”,
+    IDA 2013.
+  url: ''
+
+- text: >-
+    Peter, Sebastian; Höppner, Frank; Berthold, Michael R.
+    “Pattern Graphs: Combining Multivariate Time Series and Labelled Interval Sequences for Classification”,
+    Springer, 2013.
+  url: ''
