@@ -125,7 +125,7 @@ permalink: /publications/
 <section class="subpage-text-lists section">
   <div class="container">
 
-    <!-- Edited Volumes -->
+    <!-- Edited Volumes (LINKES - változatlan) -->
     <div class="subpage-text-block">
       <h2 class="subpage-text-title">Edited Volumes</h2>
 
@@ -144,21 +144,13 @@ permalink: /publications/
       </ul>
     </div>
 
-    <!-- Peer Reviewed -->
+    <!-- Peer Reviewed (STRING LIST) -->
     <div class="subpage-text-block">
       <h2 class="subpage-text-title">Peer Reviewed Publications</h2>
 
       <ul class="subpage-text-list">
         {% for item in site.data.peer_reviewed_publications %}
-        <li>
-          {% if item.url and item.url != "" %}
-            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-              {{ item.text }}
-            </a>
-          {% else %}
-            {{ item.text }}
-          {% endif %}
-        </li>
+        <li>{{ item }}</li>
         {% endfor %}
       </ul>
     </div>
