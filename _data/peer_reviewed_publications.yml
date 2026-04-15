@@ -34,3 +34,83 @@
     “Integration of the ImageJ Ecosystem in the KNIME Analytics Platform”,
     Frontiers in Computer Science, 2020.
   url: ''
+
+  - text: >-
+    Dreser, Nadine; Holzer, Anna-Katharina; Kapitza, Marion; Scholz, Christopher;
+    Kranaster, Petra; Gutbier, Simon; Klima, Stefanie; Kolb, David; Dietz, Christian;
+    Trefzer, Timo; Berthold, Michael R.; Waldmann, Tanja; Leist, Marcel
+    “Development of a neural rosette formation assay (RoFA) to identify neurodevelopmental toxicants
+    and to characterize their transcriptome disturbances”,
+    Archives of Toxicology, 94:151-171, 2020.
+  url: ''
+
+- text: >-
+    Gavriushina, Iuliia; Sampson, Oliver; Berthold, Michael; Pohlmeier, Winfried;
+    Borgelt, Christian
+    “Widened Learning of Index Tracking Portfolios”,
+    ICMLA, 1800-1805, 2019.
+  url: ''
+
+- text: >-
+    Berthold, Michael R.
+    “What Does It Take to be a Successful Data Scientist?”,
+    Harvard Data Science Review, 2019.
+  url: ''
+
+- text: >-
+    Sampson, Oliver R.; Borgelt, Christian; Berthold, Michael R.
+    “Communication-Free Widened Learning of Bayesian Network Classifiers Using Hashed Fiedler Vectors”,
+    IDA 2018, LNCS11191:264-277, 2018.
+  url: ''
+
+- text: >-
+    Winter, Patrick; Borgelt, Christian; Berthold, Michael R.
+    “Learned Feature Generation for Molecules”,
+    IDA 2018, LNCS11191:380-391, 2018.
+  url: ''
+
+- text: >-
+    Apweiler, Rolf; Beissbarth, Tim; Berthold, Michael R.; Blüthgen, Nils; Burmeister, Yvonne;
+    Dammann, Olaf; Deutsch, Andreas; Feuerhake, Friedrich; Franke, Andre; Wolkenhauer, Olaf
+    “Whither systems medicine?”,
+    Experimental & Molecular Medicine, 2018.
+  url: ''
+
+- text: >-
+    Fillbrunn, Alexander; Dietz, Christian; Pfeuffer, Julianus; Rahn, René;
+    Landrum, Gregory A.; Berthold, Michael R.
+    “KNIME for reproducible cross-domain analysis of life science data”,
+    Journal of Biotechnology, 2017.
+  url: ''
+
+- text: >-
+    Fillbrunn, Alexander; Wörteler, Leonard; Grossniklaus, Michael; Berthold, Michael R.
+    “Bucket Selection: A Model-Independent Diverse Selection Strategy for Widening”,
+    Advances in Intelligent Data Analysis XVI, LNCS10584, 87-98, 2017.
+  url: ''
+
+- text: >-
+    Sampson, Oliver R.; Berthold, Michael R.
+    “Widened Learning of Bayesian Network Classifiers”,
+    Advances in Intelligent Data Analysis XV, LNCS9897, 215-225, 2016.
+  url: ''
+
+- text: >-
+    Copmans, Daniëlle; Meinl, Thorsten; Dietz, Christian; van Leeuwen, Matthijs;
+    Ortmann, Julia; Berthold, Michael R.; de Witte, Peter A. M.
+    “A KNIME-Based Analysis of the Zebrafish Photomotor Response Clusters the Phenotypes
+    of 14 Classes of Neuroactive Molecules”,
+    Journal of Biomolecular Screening, 21:427-436, 2016.
+  url: ''
+
+- text: >-
+    Dietz, Christian; Berthold, Michael R.
+    “KNIME for Open-Source Bioimage Analysis: A Tutorial”,
+    Focus on Bio-Image Informatics, Springer, 2016.
+  url: ''
+
+- text: >-
+    Kotter, Tobias; Gunnemann, Stephan; Berthold, Michael R.; Faloutsos, Christos
+    “Automatic Taxonomy Extraction from Bipartite Graphs”,
+    ICDM 2015, 221-230.
+  url: ''
