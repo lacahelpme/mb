@@ -245,10 +245,11 @@ h4:last-child {
 .primary-nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: clamp(28px, 4vw, 64px);
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .primary-nav a {
@@ -292,24 +293,24 @@ h4:last-child {
   margin-top: 6px;
 }
 
+.lang-switch {
+  margin-left: auto;
+}
+
 .lang-switch a {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.3);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: var(--fs-nav);
+  color: var(--white);
   text-transform: uppercase;
-  text-decoration: none;
-  opacity: 0.8;
-  transition: all 0.2s ease;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  opacity: 0.7;
+  transition: opacity 0.18s ease;
 }
 
 .lang-switch a:hover {
   opacity: 1;
-  border-color: white;
 }
+
 
 /* Hero */
 
