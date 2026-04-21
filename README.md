@@ -114,6 +114,3 @@ Edit `_config.yml` to update core site settings such as:
 
 Always copy an existing file to keep the correct structure.
 
-```
-
----
