@@ -17,3 +17,39 @@ baseurl: ""
 
 The site will be available at:
 [https://michael-berthold.github.io/](https://michael-berthold.github.io/)
+
+## Structure
+
+- `_layouts/` → page templates  
+- `_includes/` → reusable components (header, footer)  
+- `assets/` → images and styles  
+- `_books/` → books shown on the homepage  
+- `_publications/` → publications / articles  
+- `_musings/` → musings  
+- `_videos/` → video content  
+- `de/` → German homepage  
+
+---
+
+## Content editing
+
+### Publications
+
+Go to the `_publications/` folder and open an existing file.  
+Copy it, rename it, and update the fields with the new content.
+
+---
+
+### Books
+
+Go to the `_books/` folder and update or copy an existing file with new data.
+
+---
+
+### Musings
+
+Go to the `_musings/` folder and update or copy an existing file.
+
+---
+
+Always copy an existing file to keep the correct structure.
