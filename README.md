@@ -1,4 +1,3 @@
-````md
 ### Michael R. Berthold – Jekyll Site
 
 Jekyll site for GitHub Pages.
@@ -27,7 +26,7 @@ The site will be available at:
 ## Structure
 
 * `_layouts/` → page templates
-* `_includes/` → reusable components (header, footer, etc.)
+* `_includes/` → reusable components (header, footer)
 * `assets/` → images and styles
 * `_books/` → books shown on the homepage
 * `_publications/` → publications / articles
@@ -35,7 +34,7 @@ The site will be available at:
 * `_videos/` → video content
 * `_data/` → structured data used across the site
 
-  * `site_settings.yml` → global contact details (used in the footer and across the site)
+  * `site_settings.yml` → global contact details (used in the footer across the site)
   * `contact_page.yml` → contact page specific content (press contact, social links, texts)
   * `peer_reviewed_publications.yml` → list of peer-reviewed publications
   * `edited_volumes.yml` → list of edited volumes
@@ -118,12 +117,3 @@ Always copy an existing file to keep the correct structure.
 ```
 
 ---
-
-Ez már:
-✔ rövid, de teljes  
-✔ technikailag pontos  
-✔ nem vezet félre (`output: false` tisztázva)  
-✔ nem fejlesztő-barát túlzás, de mégis korrekt  
-
-Ha később bővíted (pl. multi-language, featured content stb.), ezt könnyű lesz továbbfejleszteni 👍
-```
