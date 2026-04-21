@@ -1,6 +1,23 @@
-# Michael R. Berthold – Jekyll Skeleton
+---
 
-This is the Phase B skeleton project for a GitHub Pages compatible Jekyll site.
+### **Michael R. Berthold – Jekyll Site**
 
-## Upload tip
-Do not upload the ZIP itself to GitHub. Extract it locally, then upload the extracted folders and files together so the folder structure is preserved.
+Jekyll site for GitHub Pages.
+
+**Setup**
+
+1. Extract the project files locally
+2. Upload all files **directly to the repository root** (do not upload the ZIP and do not place them into an `mb` subfolder)
+3. Update `_config.yml`:
+
+```yaml
+url: "https://michael-berthold.github.io"
+baseurl: ""
+```
+
+4. Push to the `main` branch and enable GitHub Pages (Settings → Pages)
+
+The site will be available at:
+[https://michael-berthold.github.io/](https://michael-berthold.github.io/)
+
+---
