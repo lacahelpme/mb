@@ -1,5 +1,3 @@
----
-
 ### **Michael R. Berthold – Jekyll Site**
 
 Jekyll site for GitHub Pages.
@@ -19,5 +17,3 @@ baseurl: ""
 
 The site will be available at:
 [https://michael-berthold.github.io/](https://michael-berthold.github.io/)
-
----
