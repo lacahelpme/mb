@@ -13,8 +13,8 @@ featured: true
 link_1_url: "https://www.techradar.com/news/how-visual-programming-powers-complex-data-science"
 link_1_label: "Read more"
 
-# link_2_url: ""
-# link_2_label: ""
+link_2_url: "https://www.techradar.com/news/how-visual-programming-powers-complex-data-science"
+link_2_label: "Link 2"
 
 lang: en
 seo_title: "How visual programming powers complex data science"
