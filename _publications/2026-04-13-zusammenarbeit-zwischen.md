@@ -13,8 +13,8 @@ featured: true
 link_1_url: "https://www.it-daily.net/it-management/ki/ki-jemals-vertrauen-koennen"
 link_1_label: "Read more"
 
-link_2_url: ""
-link_2_label: ""
+link_2_url: "https://www.it-daily.net/it-management/ki/ki-jemals-vertrauen-koennen"
+link_2_label: "Link 2"
 
 lang: de
 seo_title: "Zusammenarbeit zwischen Mensch und KI: Werden wir KI jemals vertrauen können?"
