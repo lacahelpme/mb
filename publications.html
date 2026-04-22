@@ -86,11 +86,9 @@ permalink: /publications/
     </div>
 
     <div class="publications-home-grid">
-      {% assign all_publications = site.publications | sort: 'date' | reverse %}
-      {% for post in all_publications %}
-      <a class="publication-home-card"
-         href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ '/publications/' | relative_url }}{% endif %}"
-         {% if post.external_url %}target="_blank" rel="noopener noreferrer"{% endif %}>
+      {% assign featured_publications = site.publications | where: "featured", true | sort: "date" | reverse %}
+      {% for post in featured_publications limit: 6 %}
+      <article class="publication-home-card">
 
         <div class="publication-home-thumb">
           <img src="{{ post.cover | relative_url }}" alt="{{ post.alt }}">
@@ -114,9 +112,27 @@ permalink: /publications/
           <p class="publication-home-excerpt">{{ post.excerpt }}</p>
           {% endif %}
 
-          <p class="publication-home-readmore">Read more</p>
+          <div class="publication-home-links">
+            {% if post.link_1_url != "" %}
+              <a class="publication-home-readmore"
+                 href="{{ post.link_1_url }}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                {{ post.link_1_label }}
+              </a>
+            {% endif %}
+
+            {% if post.link_2_url != "" %}
+              <a class="publication-home-readmore"
+                 href="{{ post.link_2_url }}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                {{ post.link_2_label }}
+              </a>
+            {% endif %}
+          </div>
         </div>
-      </a>
+      </article>
       {% endfor %}
     </div>
   </div>
@@ -126,6 +142,34 @@ permalink: /publications/
 
 <section class="subpage-text-lists section">
   <div class="container">
+
+    <div class="subpage-text-block">
+      <h2 class="subpage-text-title">Other Publications</h2>
+
+      <ul class="subpage-text-list">
+        {% assign non_featured_publications = site.publications | where_exp: "item", "item.featured != true" | sort: "date" | reverse %}
+        {% for post in non_featured_publications %}
+        <li>
+          {{ post.title }}
+          {% if post.source_name %} – {{ post.source_name }}{% endif %}
+          {% if post.author_line %} – {{ post.author_line }}{% endif %}
+          {% if post.date %} – {{ post.date | date: "%-d %B %Y" }}{% endif %}
+          {% if post.link_1_url != "" %}
+            –
+            <a href="{{ post.link_1_url }}" target="_blank" rel="noopener noreferrer">
+              {{ post.link_1_label }}
+            </a>
+          {% endif %}
+          {% if post.link_2_url != "" %}
+            –
+            <a href="{{ post.link_2_url }}" target="_blank" rel="noopener noreferrer">
+              {{ post.link_2_label }}
+            </a>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
 
     <!-- Edited Volumes (LINKES - változatlan) -->
     <div class="subpage-text-block">
