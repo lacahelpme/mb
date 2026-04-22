@@ -8,7 +8,7 @@ alt: "Placeholder cover image for How visual programming powers complex data sci
 source_name: "TechRadar"
 author_line: "By Michael R. Berthold"
 
-featured: true
+featured: false
 
 link_1_url: "https://www.techradar.com/news/how-visual-programming-powers-complex-data-science"
 link_1_label: "Read more"
