@@ -854,7 +854,6 @@ h4:last-child {
   display: flex;
   gap: 20px;
   height: 100%;
-  text-decoration: none;
   color: inherit;
   align-items: flex-start;
 }
@@ -908,22 +907,103 @@ h4:last-child {
   line-height: 1.48;
 }
 
-.publication-home-readmore {
+.publication-home-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
   margin-top: auto;
+}
+
+.publication-home-readmore {
   font-size: 0.92rem;
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 0.14em;
 }
 
-.publication-home-card:hover .publication-home-title {
-  text-decoration: underline;
+.publication-home-readmore:hover,
+.publication-home-readmore:focus-visible {
+  opacity: 0.9;
 }
 
-.publication-home-card:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
+/* Publications listing */
+
+.publications-listing {
+  background: var(--light);
 }
+
+.publications-list-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.publication-list-card {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 18px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+  align-items: start;
+}
+
+.publication-list-card:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.publication-list-thumb img {
+  width: 100%;
+  aspect-ratio: 1 / 1.04;
+  object-fit: cover;
+  background: #d9dde0;
+}
+
+.publication-list-body {
+  display: grid;
+  align-content: start;
+}
+
+.publication-list-source {
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.42rem;
+}
+
+.publication-list-title {
+  font-size: clamp(1.2rem, 1.9vw, 1.55rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  margin-bottom: 0.55rem;
+}
+
+.publication-list-date {
+  color: #4f4f4f;
+  margin-bottom: 0.75rem;
+  font-size: 0.92rem;
+}
+
+.publication-list-excerpt {
+  color: #404040;
+  max-width: 60ch;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.52;
+}
+
+/* Publications subpage */
+
+.publications-books-section {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.publications-commentary-section .publications-band-head {
+  align-items: center;
+}
+
 
 /* Default page hero */
 
