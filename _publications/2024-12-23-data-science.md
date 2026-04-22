@@ -8,7 +8,7 @@ alt: "Placeholder cover image for Data Science – ist Künstliche Intelligenz d
 source_name: "BigData-Insider"
 author_line: "By Michael R. Berthold"
 
-featured: true
+featured: false
 
 link_1_url: "https://www.bigdata-insider.de/data-science-ist-kuenstliche-intelligenz-die-zukunft-der-datenarbeit-a-a2895e2f40a150c7abccf7ae192f4c52/"
 link_1_label: "Read more"
