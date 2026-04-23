@@ -23,7 +23,7 @@
             class="{% if page.url == '/' or page.url == '/de/' %}active{% endif %}">
             
             {% if page.lang == 'de' %}
-              Über mich
+              Über Mich
             {% else %}
               ABOUT ME
             {% endif %}
@@ -34,28 +34,44 @@
         <!-- MUSINGS -->
         <li>
           <a href="{{ '/musings/' | relative_url }}" class="{% if page.url contains '/musings' %}active{% endif %}">
-            MUSINGS
+            {% if page.lang == 'de' %}
+              Einblicke
+            {% else %}
+              MUSINGS
+            {% endif %}
           </a>
         </li>
 
         <!-- VIDEOS -->
         <li>
           <a href="{{ '/videos/' | relative_url }}" class="{% if page.url contains '/videos' %}active{% endif %}">
-            VIDEOS
+            {% if page.lang == 'de' %}
+              Videos
+            {% else %}
+              VIDEOS
+            {% endif %}
           </a>
         </li>
 
         <!-- PUBLICATIONS -->
         <li>
           <a href="{{ '/publications/' | relative_url }}" class="{% if page.url contains '/publications' %}active{% endif %}">
-            PUBLICATIONS
+            {% if page.lang == 'de' %}
+              Publikationen
+            {% else %}
+              PUBLICATIONS
+            {% endif %}
           </a>
         </li>
 
         <!-- CONTACT -->
         <li>
           <a href="{{ '/contact/' | relative_url }}" class="{% if page.url contains '/contact' %}active{% endif %}">
-            CONTACT
+            {% if page.lang == 'de' %}
+              Kontakt
+            {% else %}
+              CONTACT
+            {% endif %}
           </a>
         </li>
 
