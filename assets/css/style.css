@@ -1670,7 +1670,7 @@ h4:last-child {
 
 .footer-figure {
   position: absolute;
-  right: max(32px, calc((100vw - var(--container)) / 2));
+  right: 0;
   bottom: 0;
   width: min(32vw, 420px);
   z-index: 1;
@@ -1811,7 +1811,6 @@ a:focus-visible {
   }
 
   .footer-figure {
-    right: 32px;
     width: min(46vw, 420px);
   }
 
