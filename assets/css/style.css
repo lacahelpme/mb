@@ -1615,9 +1615,8 @@ h4:last-child {
 .footer-grid {
   min-height: 420px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
-  align-items: end;
-  column-gap: clamp(32px, 4vw, 72px);
+  grid-template-columns: 1fr;
+  align-items: center;
   position: relative;
 }
 
@@ -1670,11 +1669,10 @@ h4:last-child {
 }
 
 .footer-figure {
-  position: relative;
-  width: 100%;
-  max-width: 420px;
-  justify-self: end;
-  align-self: end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(32vw, 420px);
   z-index: 1;
   pointer-events: none;
 }
@@ -1810,19 +1808,10 @@ a:focus-visible {
 
   .footer-grid {
     min-height: auto;
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
-    column-gap: 28px;
-    align-items: end;
-  }
-
-  .footer-copy {
-    padding: 48px 0 34px;
   }
 
   .footer-figure {
-    width: 100%;
-    max-width: 360px;
-    justify-self: end;
+    width: min(46vw, 420px);
   }
 
   .footer-figure img {
