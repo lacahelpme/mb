@@ -1615,8 +1615,9 @@ h4:last-child {
 .footer-grid {
   min-height: 420px;
   display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+  align-items: end;
+  column-gap: clamp(32px, 4vw, 72px);
   position: relative;
 }
 
@@ -1669,10 +1670,11 @@ h4:last-child {
 }
 
 .footer-figure {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: min(32vw, 420px);
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  justify-self: end;
+  align-self: end;
   z-index: 1;
   pointer-events: none;
 }
