@@ -27,7 +27,7 @@ The site will be available at:
 
 * `_layouts/` → page templates
 * `_includes/` → reusable components (header, footer)
-* `assets/` → images and styles
+* `assets/` → images, video files and styles
 * `_books/` → books shown on the homepage
 * `_publications/` → publications / articles
 * `_musings/` → blog posts with their own pages
@@ -91,6 +91,16 @@ Edit `_data/peer_reviewed_publications.yml` to update the peer-reviewed publicat
 ### Edited volumes
 
 Edit `_data/edited_volumes.yml` to update the edited volumes list.
+
+---
+
+### Videos
+
+Go to the `_videos/` folder and update or copy an existing file.
+
+The video files are not uploaded yet. They need to be added to the `assets/img/videos/` folder, 
+and then their file paths should be inserted into the appropriate file in the `_videos` directory.
+
 
 ---
 
