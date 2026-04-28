@@ -25,20 +25,12 @@ permalink: /videos/
       <article class="video-card">
 
         <div class="video-card-media">
-          {% if video.video_embed %}
-          <div class="video-responsive">
-            <iframe 
-              src="{{ video.video_embed }}" 
-              title="{{ video.title }}" 
-              loading="lazy"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
+          {% if video.video_html %}
+            {{ video.video_html }}
           {% elsif video.thumbnail %}
-          <img 
-            src="{{ video.thumbnail | relative_url }}" 
-            alt="{{ video.alt | default: video.title }}">
+            <img 
+              src="{{ video.thumbnail | relative_url }}" 
+              alt="{{ video.alt | default: video.title }}">
           {% endif %}
         </div>
 
