@@ -149,11 +149,9 @@ permalink: /publications/
       </ul>
     </div>
 
+    <!-- MD LIST -->
     <div class="subpage-text-block publication-markdown-list">
-      {% capture publications_full_list %}
-        {% include_relative publication-list/publications.md %}
-      {% endcapture %}
-
+      {% capture publications_full_list %}{% include_relative publication-list/publications.md %}{% endcapture %}
       {{ publications_full_list | markdownify }}
     </div>
 
