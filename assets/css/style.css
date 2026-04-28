@@ -1004,6 +1004,41 @@ h4:last-child {
   align-items: center;
 }
 
+/* Publication markdown list subpage */
+
+
+.publication-markdown-list h2 {
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.publication-markdown-list h2:not(:first-child) {
+  margin-top: 2.75rem;
+}
+
+.publication-markdown-list ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.publication-markdown-list li {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #606060;
+}
+
+.publication-markdown-list a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
 
 /* Default page hero */
 
