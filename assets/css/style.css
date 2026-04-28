@@ -1724,7 +1724,6 @@ a:focus-visible {
 
 @media (max-width: 1180px) {
   .about-light-grid,
-  .bio-grid,
   .video-teaser-grid,
   .footer-grid,
   .publication-list-card,
@@ -1916,6 +1915,7 @@ a:focus-visible {
   }
 
   .hero-shell,
+  .bio-grid,
   .books-grid-home,
   .musings-band-grid,
   .publications-home-grid,
