@@ -13,61 +13,10 @@ permalink: /publications/
   <div class="container">
     <h1 class="subpage-intro-title">Publications</h1>
     <p class="subpage-intro-text">
-     Michael Bertold has published extensively on key concepts, methods, and accessible applications in data science, machine learning, and artificial intelligence.
+      Michael Berthold has published extensively on key concepts, methods, and accessible applications in data science, machine learning, and artificial intelligence.
     </p>
   </div>
 </section>
-
-<!-- BOOKS 
-
-<section class="books-band section publications-books-section">
-  <div class="container">
-    <div class="books-head">
-      <h2 class="section-title section-title-light">Books and Textbooks</h2>
-
-      <a class="books-tip"
-         href="https://link.springer.com/content/pdf/10.1007/978-3-642-31830-6.pdf"
-         target="_blank"
-         rel="noopener noreferrer">
-        <span class="books-tip-label">Tip</span>
-        <span>
-          You have full access to this
-          <span class="books-tip-highlight">open access</span>
-          book: Bisociative Knowledge Discovery
-        </span>
-      </a>
-    </div>
-
-    <div class="books-grid books-grid-all">
-      {% assign all_books = site.books | sort: 'date' | reverse %}
-      {% for book in all_books %}
-      <article class="book-card-home">
-        <div class="book-card-image">
-          <img src="{{ book.cover | relative_url }}" alt="{{ book.alt }}">
-        </div>
-
-        <div class="book-card-content">
-          <h3 class="book-card-title">{{ book.title }}</h3>
-          <p class="book-card-authors">{{ book.author }}</p>
-          <p class="book-card-year">({{ book.year }})</p>
-          <p class="book-card-excerpt">{{ book.excerpt }}</p>
-
-          {% if book.external_url %}
-          <a class="button-outline {% if book.button_style == 'accent' %}button-outline-accent{% else %}button-outline-light{% endif %}"
-             href="{{ book.external_url }}"
-             target="_blank"
-             rel="noopener noreferrer">
-            {{ book.button_label }}
-          </a>
-          {% endif %}
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
--->
 
 <!-- COMMENTARY / ARTICLES -->
 
@@ -87,6 +36,7 @@ permalink: /publications/
 
     <div class="publications-home-grid">
       {% assign featured_publications = site.publications | where: "featured", true | sort: "date" | reverse %}
+
       {% for post in featured_publications limit: 6 %}
       <article class="publication-home-card">
 
@@ -95,7 +45,6 @@ permalink: /publications/
         </div>
 
         <div class="publication-home-body">
-
           {% if post.source_name %}
             <p class="publication-home-source">{{ post.source_name }}</p>
           {% endif %}
@@ -132,6 +81,7 @@ permalink: /publications/
             {% endif %}
           </div>
         </div>
+
       </article>
       {% endfor %}
     </div>
@@ -148,18 +98,21 @@ permalink: /publications/
 
       <ul class="subpage-text-list">
         {% assign featured_overflow = featured_publications | slice: 6, 1000 %}
+
         {% for post in featured_overflow %}
         <li>
           {{ post.title }}
           {% if post.source_name %} – {{ post.source_name }}{% endif %}
           {% if post.author_line %} – {{ post.author_line }}{% endif %}
           {% if post.date %} – {{ post.date | date: "%-d %B %Y" }}{% endif %}
+
           {% if post.link_1_url and post.link_1_url != "" %}
             –
             <a href="{{ post.link_1_url }}" target="_blank" rel="noopener noreferrer">
               {{ post.link_1_label }}
             </a>
           {% endif %}
+
           {% if post.link_2_url and post.link_2_url != "" %}
             –
             <a href="{{ post.link_2_url }}" target="_blank" rel="noopener noreferrer">
@@ -170,18 +123,21 @@ permalink: /publications/
         {% endfor %}
 
         {% assign non_featured_publications = site.publications | where_exp: "item", "item.featured != true" | sort: "date" | reverse %}
+
         {% for post in non_featured_publications %}
         <li>
           {{ post.title }}
           {% if post.source_name %} – {{ post.source_name }}{% endif %}
           {% if post.author_line %} – {{ post.author_line }}{% endif %}
           {% if post.date %} – {{ post.date | date: "%-d %B %Y" }}{% endif %}
+
           {% if post.link_1_url and post.link_1_url != "" %}
             –
             <a href="{{ post.link_1_url }}" target="_blank" rel="noopener noreferrer">
               {{ post.link_1_label }}
             </a>
           {% endif %}
+
           {% if post.link_2_url and post.link_2_url != "" %}
             –
             <a href="{{ post.link_2_url }}" target="_blank" rel="noopener noreferrer">
@@ -193,34 +149,12 @@ permalink: /publications/
       </ul>
     </div>
 
-    <!-- Edited Volumes (LINKES - változatlan) -->
-    <div class="subpage-text-block">
-      <h2 class="subpage-text-title">Edited Volumes</h2>
+    <div class="subpage-text-block publication-markdown-list">
+      {% capture publications_full_list %}
+        {% include_relative publication-list/publications.md %}
+      {% endcapture %}
 
-      <ul class="subpage-text-list">
-        {% for item in site.data.edited_volumes %}
-        <li>
-          {% if item.url and item.url != "" %}
-            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-              {{ item.text }}
-            </a>
-          {% else %}
-            {{ item.text }}
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <!-- Peer Reviewed (STRING LIST) -->
-    <div class="subpage-text-block">
-      <h2 class="subpage-text-title">Peer Reviewed Publications</h2>
-
-      <ul class="subpage-text-list">
-        {% for item in site.data.peer_reviewed_publications %}
-        <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
+      {{ publications_full_list | markdownify }}
     </div>
 
   </div>
