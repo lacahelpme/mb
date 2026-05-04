@@ -1331,10 +1331,8 @@ h4:last-child {
 }
 
 .musing-tile-subpage {
-  min-height: 370px;
-  grid-template-rows: auto 1fr auto;
-  padding: 22px 18px 18px;
-  border-radius: 22px;
+  padding: 20px 20px 18px;
+  border-radius: 18px;
 }
 
 .musing-tile-subpage .musing-tile-top {
@@ -1359,12 +1357,23 @@ h4:last-child {
   opacity: 0.95;
 }
 
-.musing-tile-subpage .musing-tile-actions {
-  margin-top: 1.25rem;
-}
-
 .musing-tile-subpage .button-outline {
   justify-self: start;
+}
+
+.musings-listing-cards .musing-tile-excerpt {
+  color: #404040;
+}
+
+.musings-listing-cards .button-outline {
+  border-color: var(--black);
+  color: var(--black);
+}
+
+.musings-listing-cards .button-outline:hover,
+.musings-listing-cards .button-outline:focus-visible {
+  background: var(--black);
+  color: var(--white);
 }
 
 /* Publications subpage */
