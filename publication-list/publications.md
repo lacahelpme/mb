@@ -1,9 +1,3 @@
----
-layout: default
-title: Publications
-permalink: /publications/
----
-
 ## Select Thought Leadership / Industry Commentary
 
 - Berthold, Michael [_Werden wir KI jemals vertrauen können?_](https://www.it-daily.net/it-management/ki/ki-jemals-vertrauen-koennen), **it-daily.net**, 13 April 2026.
